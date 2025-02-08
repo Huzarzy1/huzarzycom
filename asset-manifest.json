@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/huzarzy.com/static/css/main.f855e6bc.css",
-    "main.js": "/huzarzy.com/static/js/main.e3295c15.js",
-    "static/js/488.0c108be1.chunk.js": "/huzarzy.com/static/js/488.0c108be1.chunk.js",
-    "static/media/logo.svg": "/huzarzy.com/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
-    "index.html": "/huzarzy.com/index.html",
-    "main.f855e6bc.css.map": "/huzarzy.com/static/css/main.f855e6bc.css.map",
-    "main.e3295c15.js.map": "/huzarzy.com/static/js/main.e3295c15.js.map",
-    "488.0c108be1.chunk.js.map": "/huzarzy.com/static/js/488.0c108be1.chunk.js.map"
+    "main.css": "/huzarzycom/static/css/main.f855e6bc.css",
+    "main.js": "/huzarzycom/static/js/main.d92e7749.js",
+    "static/js/488.0c108be1.chunk.js": "/huzarzycom/static/js/488.0c108be1.chunk.js",
+    "static/media/logo.svg": "/huzarzycom/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/huzarzycom/index.html",
+    "main.f855e6bc.css.map": "/huzarzycom/static/css/main.f855e6bc.css.map",
+    "main.d92e7749.js.map": "/huzarzycom/static/js/main.d92e7749.js.map",
+    "488.0c108be1.chunk.js.map": "/huzarzycom/static/js/488.0c108be1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f855e6bc.css",
-    "static/js/main.e3295c15.js"
+    "static/js/main.d92e7749.js"
   ]
 }
