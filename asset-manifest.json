@@ -1,15 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.2405467e.css",
-    "main.js": "/static/js/main.f1a69b9a.js",
+    "main.css": "/static/css/main.ecb7cfa6.css",
+    "main.js": "/static/js/main.0d1759e7.js",
     "static/js/488.0c108be1.chunk.js": "/static/js/488.0c108be1.chunk.js",
+    "static/media/ig.png": "/static/media/ig.55012545d2926faf6505.png",
+    "static/media/halifax-day.jpg": "/static/media/halifax-day.1f0d350aafe35647ec9c.jpg",
+    "static/media/fb.png": "/static/media/fb.ce691ca7e7ca093c0a38.png",
+    "static/media/linkedin.webp": "/static/media/linkedin.bbb2414bc205a327d09b.webp",
     "index.html": "/index.html",
-    "main.2405467e.css.map": "/static/css/main.2405467e.css.map",
-    "main.f1a69b9a.js.map": "/static/js/main.f1a69b9a.js.map",
+    "main.ecb7cfa6.css.map": "/static/css/main.ecb7cfa6.css.map",
+    "main.0d1759e7.js.map": "/static/js/main.0d1759e7.js.map",
     "488.0c108be1.chunk.js.map": "/static/js/488.0c108be1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.2405467e.css",
-    "static/js/main.f1a69b9a.js"
+    "static/css/main.ecb7cfa6.css",
+    "static/js/main.0d1759e7.js"
   ]
 }
