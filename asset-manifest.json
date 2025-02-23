@@ -1,19 +1,27 @@
 {
   "files": {
-    "main.css": "/static/css/main.ecb7cfa6.css",
-    "main.js": "/static/js/main.0d1759e7.js",
+    "main.css": "/static/css/main.5d1316e3.css",
+    "main.js": "/static/js/main.e4549020.js",
     "static/js/488.0c108be1.chunk.js": "/static/js/488.0c108be1.chunk.js",
+    "static/media/goldberg.jpg": "/static/media/goldberg.e25ff97bb860aec804ed.jpg",
+    "static/media/cadet-3.jpg": "/static/media/cadet-3.01a4d558459f310405d8.jpg",
+    "static/media/cadet-2.jpg": "/static/media/cadet-2.8daa8f447b7f986cd638.jpg",
     "static/media/ig.png": "/static/media/ig.55012545d2926faf6505.png",
+    "static/media/xchangebot.png": "/static/media/xchangebot.fe81446f7ef5e1911a2a.png",
+    "static/media/cadet-4.jpg": "/static/media/cadet-4.2eb1e186f6918d4ee4b5.jpg",
     "static/media/halifax-day.jpg": "/static/media/halifax-day.1f0d350aafe35647ec9c.jpg",
+    "static/media/papyrus.ttf": "/static/media/papyrus.ca0c0d7f3f97c15b5476.ttf",
+    "static/media/cadet-1.jpg": "/static/media/cadet-1.3f4a6932f4cb5c85b593.jpg",
+    "static/media/react.png": "/static/media/react.21ab8e16d0a7abae2b5e.png",
     "static/media/fb.png": "/static/media/fb.ce691ca7e7ca093c0a38.png",
     "static/media/linkedin.webp": "/static/media/linkedin.bbb2414bc205a327d09b.webp",
     "index.html": "/index.html",
-    "main.ecb7cfa6.css.map": "/static/css/main.ecb7cfa6.css.map",
-    "main.0d1759e7.js.map": "/static/js/main.0d1759e7.js.map",
+    "main.5d1316e3.css.map": "/static/css/main.5d1316e3.css.map",
+    "main.e4549020.js.map": "/static/js/main.e4549020.js.map",
     "488.0c108be1.chunk.js.map": "/static/js/488.0c108be1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ecb7cfa6.css",
-    "static/js/main.0d1759e7.js"
+    "static/css/main.5d1316e3.css",
+    "static/js/main.e4549020.js"
   ]
 }
