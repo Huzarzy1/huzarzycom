@@ -1,8 +1,9 @@
 {
   "files": {
-    "main.css": "/static/css/main.1bb01317.css",
-    "main.js": "/static/js/main.0c777dee.js",
+    "main.css": "/static/css/main.8620ef94.css",
+    "main.js": "/static/js/main.a1aee464.js",
     "static/js/488.0c108be1.chunk.js": "/static/js/488.0c108be1.chunk.js",
+    "static/media/prog-bridge.jpg": "/static/media/prog-bridge.accf321b8fa6398937d2.jpg",
     "static/media/goldberg.jpg": "/static/media/goldberg.e25ff97bb860aec804ed.jpg",
     "static/media/cadet-3.jpg": "/static/media/cadet-3.01a4d558459f310405d8.jpg",
     "static/media/cadet-2.jpg": "/static/media/cadet-2.8daa8f447b7f986cd638.jpg",
@@ -10,18 +11,20 @@
     "static/media/xchangebot.png": "/static/media/xchangebot.fe81446f7ef5e1911a2a.png",
     "static/media/cadet-4.jpg": "/static/media/cadet-4.2eb1e186f6918d4ee4b5.jpg",
     "static/media/halifax-day.jpg": "/static/media/halifax-day.1f0d350aafe35647ec9c.jpg",
+    "static/media/mugshot.jpg": "/static/media/mugshot.ce6a1df9db71fd718503.jpg",
     "static/media/papyrus.ttf": "/static/media/papyrus.ca0c0d7f3f97c15b5476.ttf",
     "static/media/cadet-1.jpg": "/static/media/cadet-1.3f4a6932f4cb5c85b593.jpg",
+    "static/media/Neuropol.otf": "/static/media/Neuropol.2b1fd092a5181c10b2a4.otf",
     "static/media/react.png": "/static/media/react.21ab8e16d0a7abae2b5e.png",
     "static/media/fb.png": "/static/media/fb.ce691ca7e7ca093c0a38.png",
     "static/media/linkedin.webp": "/static/media/linkedin.bbb2414bc205a327d09b.webp",
     "index.html": "/index.html",
-    "main.1bb01317.css.map": "/static/css/main.1bb01317.css.map",
-    "main.0c777dee.js.map": "/static/js/main.0c777dee.js.map",
+    "main.8620ef94.css.map": "/static/css/main.8620ef94.css.map",
+    "main.a1aee464.js.map": "/static/js/main.a1aee464.js.map",
     "488.0c108be1.chunk.js.map": "/static/js/488.0c108be1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1bb01317.css",
-    "static/js/main.0c777dee.js"
+    "static/css/main.8620ef94.css",
+    "static/js/main.a1aee464.js"
   ]
 }
