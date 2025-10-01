@@ -1,7 +1,5 @@
 import React from 'react';
 import xchangebot from '../assets/xchangebot.png';
-import logo from '../assets/react.png';
-import '../styles/Projects.css'; 
 
 
 
@@ -30,7 +28,7 @@ function Projects() {
                 <section class="project-section">
                     <div class="project-content">
                         <div class="image-container">
-                            <img src={logo} alt="Portfolio Website Preview" class="project-image"/>
+                            {/* <img src={logo} alt="Portfolio Website Preview" class="project-image"/> */}
                         </div>
                         <div class="text-content">
                             <h2>huzarzy.com (Portfolio Website)</h2>

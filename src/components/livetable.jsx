@@ -1,5 +1,5 @@
 import react, {useState, useEffect}  from 'react';
-import '../styles/Livetable.css';
+// import '../styles/Livetable.css';
 
 function Livetable() {
 

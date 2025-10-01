@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/Bibleverse.css';
+// import '../styles/Bibleverse.css';
 
 function Bibleverse() {
   const [verse, setVerse] = useState(null);

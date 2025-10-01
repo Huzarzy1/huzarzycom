@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import '../styles/Footer.css';
+// import '../styles/Footer.css';
 import fbIcon from '../assets/fb.png';
 import igIcon from '../assets/ig.png';
 import linkedinIcon from '../assets/linkedin.webp';

@@ -1,116 +1,121 @@
-import React from 'react';
-import Bibleverse from '../components/Bibleverse';
-import Halifax from '../assets/halifax-day.jpg';
+// import Bibleverse from '../components/Bibleverse';
+// import Halifax from '../assets/halifax-day.jpg';
 import '../styles/Home.css';
+import fcsLogo from '../assets/fcs-logo.png';
+import prague from  '../assets/Screenshot 2025-09-30 174353.png';
 
-import mugshot from '../assets/mugshot.jpg';
-import goldberg from '../assets/goldberg.jpg';
-import personal from '../assets/prog-bridge.jpg';
 
-import bayview from '../assets/bayview.jpg';
 
-import Cadet1 from '../assets/cadet-1.jpg';
-import Cadet2 from '../assets/cadet-2.jpg';
-import Cadet3 from '../assets/cadet-3.jpg';
-import Cadet4 from '../assets/cadet-4.jpg';
-
-function Home() {
+const Home = () => {
   return (
-    <div>
-      <div className='banner'>
-        <img id='halifax' src={Halifax} alt='Halifax'/>
+    <>
+      {/* ================= NAVBAR ================= */}
+      <nav className="top-navbar">
+        {/* <div className="nav-logo">
+          <p>bk</p>
+        </div> */}
+        <ul>
+          <li>
+            <a href="#welcome">welcome</a>
+          </li>
+          <li>
+            <a href="#section1">about</a>
+          </li>
+          <li>
+            <a href="#section2">interests</a>
+          </li>
+          {/* <li>
+            <a href="#section3">Section 3</a>
+          </li>
+          <li>
+            <a href="#section4">Section 4</a>
+          </li> */}
+        </ul>
+      </nav>
+
+
+    <div className="page-content">
+      <div className="welcome-section" id="welcome">
+        <h2 className="page-title">Welcome</h2>
+        <p className="page-subtitle">
+          Hi, I’m Brandon — a Polish/Canadian student passionate about technology, travel, and learning.
+        </p>
       </div>
-      <div className='block' id='bible-block'>
-        <Bibleverse />
-      </div>
-      {/* <div className='block'>
-        <h1 id='intro'>Hi, I'm Brandon!</h1>
-      </div> */}
 
-    <main>
-        <section class="container">
-            <div class="profile-section">
-                <img src={mugshot} alt="selfie" id="profile-img" />
-                <div>
-                    <h2>Hi, I'm Brandon!</h2>
-                    <p>My name is Brandon Kuciapski! I am a Polish-Canadian student currently studying computer science at Dalhousie University in Halifax NS, Canada. My personal interests lie in artificial intelligence, web/app development, analytics, and cybersecurity. </p>
-                </div>
-            </div>
-            <div id='intro-lower'>
-              <div className='profile-section' id='goldberg-section'>
-                <img src={goldberg} alt='goldberg' id='goldberg' />
-                <p>I am currently a first-year Computer Science student at Dalhousie University, where I am building a strong foundation in programming, software development, and problem-solving. My passion for technology drives me to explore new innovations and continuously improve my skills.</p>
-              </div>
-              <div className='profile-section' id='personal-section'>
-                <img src={personal} alt='Prague Bridge' id='prague' />
-                <p>I love traveling and exploring new places. Seeing different cities and experiencing new cultures is really exciting to me. I enjoy trying different foods, meeting new people, and learning about how others live. Traveling helps me see the world in new ways</p>
-              </div>
-            </div>
-        </section>
+      <div className="content-sections">
+        {/* About Me Section */}
+        <div className="content-section" id="section1">
+          <h3 className="section-title">About Me</h3>
+          <div className="content-item">
+            <p className="item-description">
+              I am a <strong>second-year Bachelor of Computer Science (BCS)</strong> student at 
+              <strong> Dalhousie University</strong> in Halifax, Nova Scotia.  
+              My main interests lie in <strong>web/software development</strong> and <strong>cybercrime</strong>.
+            </p>
+          </div>
+        </div>
 
-
-        <section class="container-experience-section">
-          <h2>Experience</h2>
-          <div class="experience-content">
-              <div class="experience-text">
-                  <h3>Bayview High School, Upper Tantallon</h3>
-                  <p class="date">October 2023 - June 2024</p>
-                  <div class="responsibilities-grid">
-                      <div class="bullet">●</div>
-                      <p>Volunteered lunch hours to tutor students</p>
-                      <div class="bullet">●</div>
-                      <p>Provided academic support to any student seeking help with school work</p>
+        {/* Academic Life Section */}
+        <div className="content-section" id='academics'>
+          <div>
+            <h3 className="section-title">Academics</h3>
+            <div className="content-grid">
+              <div className="content-card">
+                <div className="card-label">My University</div>
+                <div className="card-content">
+                  <div className="text-block">
+                    Dalhousie University provides me with a strong foundation in computer science,  
+                    from algorithms to modern Machine Learning.
                   </div>
+                </div>
               </div>
-              <div class="experience-photo">
-                  <img src={bayview} alt="Tutoring Session" class="experience-img" />
-              </div> 
-          </div>
-        
-          <div class="experience-content">
-            <div class="experience-text">
-                <h3>250 Vimy Air Cadets, Hubley</h3>
-                <p class="date">September 2021 - June 2024</p>
-                <div class="responsibilities-grid">
-                    <div class="bullet">●</div>
-                    <p>Ran squadron with leadership role</p>
-                    <div class="bullet">●</div>
-                    <p>Worked with schedules to make sure all cadets are being taught</p>
-                    <div class="bullet">●</div>
-                    <p>Indulged in Community service with 25+ additional hours of volunteer work</p>
-                </div>
             </div>
           </div>
-        
-        
-        
-        
-        
-        </section>  
+          <div className="image-placeholder">
+            <img id="fcs-logo" src={fcsLogo} alt="Faculty of Computer Science Logo" />
+          </div>
+        </div>
 
-
-
-
-        <section class="container">
-            <h2>My Gallery</h2>
-            <div class="photo-grid">
-                <div class="photo-container">
-                    <img src={Cadet1} alt="Hobby 1" />
-                </div>
-                <div class="photo-container">
-                    <img src={Cadet2} alt="Hobby 2" />
-                </div>
-                <div class="photo-container">
-                    <img src={Cadet3} alt="Hobby 3" />
-                </div>
-                <div class="photo-container">
-                    <img src={Cadet4} alt="Hobby 4" />
-                </div>
+        {/* Interests Section */}
+        <div className="content-section" id="section2">
+          <h3 className="section-title">My Interests</h3>
+          <div className="content-list">
+            <div className="content-item">
+              <h4 className="item-title">Technology</h4>
+              <p className="item-description">
+                I enjoy exploring software development, and taking on new projects that further my skills of the trade.
+              </p>
             </div>
-        </section>
-    </main>
+
+            <div className="content-item">
+              <h4 className="item-title">Travelling</h4>
+              <p className="item-description">
+                Prague is my fav city :&#x29;  
+              </p>
+              <div className="image-placeholder">
+                <img id='prague' src={prague} alt="Prague Brandon" className="prague-image" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Closing Section */}
+        <div className="content-section" id="section3">
+          <h3 className="section-title">Looking Ahead</h3>
+          <div className="content-item">
+            <p className="item-description">
+              My goal is to build impactful software development while contributing to a safer digital world.
+            </p>
+          </div>
+        </div>
+          <footer className="footer">
+            <p>© 2025 Brandon Kuciapski. huzarzy<span className="bold">com</span></p>
+          </footer>
+      </div>
     </div>
-  )
-}
+    </>
+  );
+};
 
 export default Home;
+

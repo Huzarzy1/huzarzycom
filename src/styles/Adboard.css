@@ -1,0 +1,79 @@
+    @font-face {
+    font-family: 'Myriad Pro Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Myriad Pro Regular'), url('../fonts/MYRIADPRO-REGULAR.OTF') format('opentype');
+    }
+    
+
+.adboard {
+  grid-area: adboard;
+  background: rgb(244, 244, 244);
+  border-radius: 10px;
+  border: 1px solid #dfdfdf;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 220px);
+  overflow: hidden;
+}
+
+.adboard-content {
+  /* padding: 24px; */
+  height: 100%;
+  overflow-y: auto;
+}
+
+
+
+.o12 {
+  width: 222px;
+  height: 261px;
+  padding-top: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.ipod {
+  width: 222px;
+  height: 261px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.adboard-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  font-family: 'Myriad Pro Regular', sans-serif;
+  color: #565656;
+  padding-left: 12px;
+  border: 2px solid #dfdfdf;
+  border-top: none;
+  border-radius: 8px;
+  background: linear-gradient(#efefef, #cecece, #efefef);
+
+  
+}
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .app-layout {
+    grid-template-columns: 200px 1fr 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+      "header"
+      "navbar"
+      "main"
+      "adboard";
+  }
+  
+  .navbar, .adboard {
+    height: auto;
+  }
+  
+  .content-grid, .project-grid {
+    grid-template-columns: 1fr;
+  }
+}

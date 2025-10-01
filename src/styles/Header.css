@@ -1,0 +1,35 @@
+@font-face {
+  font-family: 'ITC Avant Garde Gothic';
+  src: local('ITC Avant Garde Gothic Bk'), local('ITC-Avant-Garde-Gothic-Bk'),
+       url('../fonts/ITCAvantGardeStd-Bk.woff2') format('woff2'),
+       url('../fonts/ITCAvantGardeStd-Bk.woff') format('woff'),
+       url('../fonts/ITCAvantGardeStd-Bk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  grid-area: header;
+  height: 120px;
+  background: linear-gradient(#cccccc, #989898);
+  color: #000;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 12px 20px;
+  font-family: 'ITC Avant Garde Gothic', sans-serif;
+}
+
+header h1 {
+  font-size: 36px;  
+  margin: 0;
+  font-weight: lighter;
+}
+
+header h1 .bold {
+  font-weight: bold;
+  /* text-shadow: 0.5px 0.5px 0 #000;  */
+  /* -webkit-text-stroke: 0.3px #000; */
+  /* letter-spacing: 0.05em;  */
+}

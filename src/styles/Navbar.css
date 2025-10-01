@@ -1,134 +1,131 @@
 @font-face {
-  font-family: 'Neuropol';
-  src: url(../fonts/Righteous-Regular.ttf);
+  font-family: 'Myriad Pro Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Myriad Pro Regular'), url('../fonts/MYRIADPRO-REGULAR.OTF') format('opentype');
+}
+
+@font-face {
+  font-family: 'ITC Avant Garde Gothic';
+  src: local('ITC Avant Garde Gothic Bk'), local('ITC-Avant-Garde-Gothic-Bk'),
+       url('../fonts/ITCAvantGardeStd-Bk.woff2') format('woff2'),
+       url('../fonts/ITCAvantGardeStd-Bk.woff') format('woff'),
+       url('../fonts/ITCAvantGardeStd-Bk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.Navbar {
+  grid-area: navbar;
+  background: rgb(244, 244, 244);
+  border: 1px solid #dfdfdf;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 425px);
+  overflow: hidden;
+}
+
+.navbar-content {
+  height: 100%;
+  overflow-y: auto;
+}
+
+.navbar-title {
+  font-size: 1.125rem;
+  font-weight: bold;
+  font-family: 'Myriad Pro Regular', sans-serif;
+  color: #565656;
+  padding-left: 12px;
+  border: 2px solid #dfdfdf;
+  border-top: none;
+  border-radius: 8px;
+  background: linear-gradient(#efefef, #cecece, #efefef);
+
+  
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.nav-link, .social-link {
+  display: block;
+  padding: 12px 16px;
+  color: #131064;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  /* font-family: 'ITC Avant Garde Gothic', sans-serif; */
+  font-family: 'Myriad Pro Regular', sans-serif;
+  font-weight: bold;
+}
+
+
+.nav-link:hover, .social-link:hover {
+  color: #1f2937;
+  background-color: #f3f4f6;
+}
+
+.nav-link.active, .social-link.active {
+  background-color: #e5e7eb;
+  color: #111827;
+}
+
+.navbar-section {
+  border-top: 1px solid #e5e7eb;
+}
+
+.section-title {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 16px;
+}
+
+.nav-icon {
+  width: 32px;
+  height: 32px;
+  margin-right: 16px;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+
+.nav-link,
+.social-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  color: #122260;
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  /* font-family: 'ITC Avant Garde Gothic', sans-serif; */
+  font-weight: bold;
+  font-family: 'Myriad Pro Regular', sans-serif;
+  border-bottom: 1px solid #e5e5e5; 
+}
+
+.nav-link:last-child,
+.social-link:last-child {
+  border-bottom: none; 
+}
+
+.nav-icon {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  vertical-align: middle;
 }
 
 
 
-.navbar {
-    width: 100%;
-    height: 100px;
-    background-color: #ADD8E7;
-    display: flex;
-    flex-direction: row;
-    position: fixed;
-    z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  }
-  
-  .navbar .leftside {
-    flex: 40%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 75px;
-    color: #213F84;
-    /* font-family: 'Neuropol'; */
-  }
 
-  .leftside > h1 {
-    transition-duration: 2s;
-  }
-
-  .leftside > h1:hover {
-    color: #84213F;
-    font-size: 34px;
-    font-weight: bold;
-  }
-
-  .rightside > a {
-    transition-duration: 0.8s;
-  }
-
-  .rightside > a:hover {
-    color: #84213F;
-    font-size: 18px;
-  }
-  
-  .navbar .leftside img {
-    width: 70px;
-  }
-  
-  .navbar .rightside {
-    flex: 30%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-  }
-  
-  .navbar a {
-    color: #213F84;
-    text-decoration: none;
-    margin: 20px;
-  }
-  
-  .navbar .rightside button {
-    background-color: transparent;
-    border: none;
-    color: #213F84;
-    cursor: pointer;
-  }
-  
-  .navbar .rightside svg {
-    font-size: 40px;
-  }
-  
-  .navbar #open {
-    padding-left: 0px;
-  }
-  .navbar #open img {
-    display: none;
-  }
-  
-  .navbar #close img {
-    display: inherit;
-  }
-  
-  .navbar #open .hiddenLinks {
-    display: inherit;
-    margin-left: 30px;
-  }
-  
-  .navbar #close .hiddenLinks {
-    display: none;
-  }
-  
-  .navbar #open a {
-    width: 70px;
-    margin: 5px;
-  }
-  @media only screen and (max-width: 900px) {
-    .navbar .rightside a {
-      width: 70px;
-    }
-    .navbar .leftside {
-      padding-left: 50px;
-    }
-  }
-  
-  @media only screen and (max-width: 600px) {
-    .navbar .rightside a {
-      display: none;
-    }
-  
-    .navbar .rightside {
-      justify-content: flex-end;
-      padding-right: 50px;
-    }
-  
-    .navbar .rightside button {
-      display: inherit;
-    }
-  }
-  
-  @media only screen and (min-width: 600px) {
-    .navbar .rightside button {
-      display: none;
-    }
-  
-    .hiddenLinks {
-      display: none;
-    }
-  }

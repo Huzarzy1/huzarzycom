@@ -1,0 +1,37 @@
+.app-layout {
+  display: grid;
+  grid-template-columns: 224px 1fr 224px;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: 
+    "header header header"
+    "navbar main adboard";
+  min-height: 100vh;
+  gap: 16px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-left: 225px;
+  padding-right: 225px;
+  position: relative;
+  z-index: 1;
+  background-image: url('../assets/bk-bg2.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Avant Garde', AvantGarde-Book, AvantGarde-Medium, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  background: transparent;
+  color: #374151;
+  line-height: 1.6;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
