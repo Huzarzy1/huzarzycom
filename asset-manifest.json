@@ -1,12 +1,11 @@
 {
   "files": {
     "main.css": "/static/css/main.a5c111c5.css",
-    "main.js": "/static/js/main.135643e3.js",
+    "main.js": "/static/js/main.a6064770.js",
     "static/js/488.0c108be1.chunk.js": "/static/js/488.0c108be1.chunk.js",
     "static/media/Screenshot 2025-09-30 174353.png": "/static/media/Screenshot 2025-09-30 174353.d9c296b246d600f99149.png",
     "static/media/ig.png": "/static/media/ig.55012545d2926faf6505.png",
     "static/media/com.burbn.instagram-large.png": "/static/media/com.burbn.instagram-large.a86731c433415e2f7d5a.png",
-    "static/media/xchangebot.png": "/static/media/xchangebot.fe81446f7ef5e1911a2a.png",
     "static/media/com.apple.AppStore-large.png": "/static/media/com.apple.AppStore-large.dabdb355f7237c28e597.png",
     "static/media/com.apple.mobileslideshow-large.png": "/static/media/com.apple.mobileslideshow-large.f46440f997d4856cf140.png",
     "static/media/ipod.jpg": "/static/media/ipod.58bd70fe14dbacd421f0.jpg",
@@ -23,11 +22,11 @@
     "static/media/linkedin.webp": "/static/media/linkedin.bbb2414bc205a327d09b.webp",
     "index.html": "/index.html",
     "main.a5c111c5.css.map": "/static/css/main.a5c111c5.css.map",
-    "main.135643e3.js.map": "/static/js/main.135643e3.js.map",
+    "main.a6064770.js.map": "/static/js/main.a6064770.js.map",
     "488.0c108be1.chunk.js.map": "/static/js/488.0c108be1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.a5c111c5.css",
-    "static/js/main.135643e3.js"
+    "static/js/main.a6064770.js"
   ]
 }
