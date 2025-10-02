@@ -1,0 +1,123 @@
+/* Font declarations */
+@font-face {
+  font-family: 'ITC Avant Garde Gothic';
+  src: local('ITC Avant Garde Gothic Bk'),
+      url('../fonts/ITCAvantGardeStd-Bk.woff2') format('woff2'),
+      url('../fonts/ITCAvantGardeStd-Bk.woff') format('woff'),
+      url('../fonts/ITCAvantGardeStd-Bk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad Pro Regular';
+  src: local('Myriad Pro Regular'), 
+       url('../fonts/MYRIADPRO-REGULAR.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main-content {
+  grid-area: main;
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 136px);
+  overflow-y: auto;
+}
+
+.page-content {
+  padding: 32px;
+  height: 100%;
+  font-family: 'ITC Avant Garde Gothic', sans-serif;
+}
+
+/* Typography */
+.page-title, .section-title {
+  color: #2b456a;
+  font-family: 'myriad pro regular', sans-serif;
+  font-weight: bold;
+}
+
+.page-title {
+  font-size: 1.875rem;
+  margin-bottom: 16px;
+  letter-spacing: 0.05em;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  margin-bottom: 16px;
+}
+
+/* Content sections */
+.content-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.content-section {
+  background-color: #f9fafb;
+  border-radius: 6px;
+  padding: 24px;
+}
+
+.content-item {
+  background: white;
+  border: 1px solid #f3f4f6;
+  border-radius: 6px;
+  padding: 16px;
+}
+
+.item-title {
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 8px;
+  font-family: 'ITC Avant Garde Gothic', sans-serif;
+}
+
+.item-description {
+  font-size: 0.875rem;
+  color: #6b7280;
+  font-family: 'ITC Avant Garde Gothic', sans-serif;
+}
+
+
+.image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+#arrow {
+  width: 200px;
+  height: 67px;
+  border-radius: 6px;
+  padding-top: 10px;
+  transform: scaley(-1);
+}
+
+/* Footer */
+.footer {
+  height: 84px;
+  background: linear-gradient(#f0f0f0, #cfcfcf);
+  border-top: 1px solid #bdbdbd;
+  font-family: 'ITC Avant Garde Gothic', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 605px;
+  left: 50%;
+  position: relative;
+  margin-left: -303px;
+}
+
+footer p .bold {
+  font-weight: bold;
+}
+
+
+

@@ -1,5 +1,5 @@
 import React from "react";
-// import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 import homePng from "../assets/IconBundles/com.apple.mobileslideshow-large.png";
 import contactpng from "../assets/IconBundles/com.apple.MobileAddressBook-large.png";
@@ -10,11 +10,13 @@ import instapng from "../assets/IconBundles/com.burbn.instagram-large.png";
 
 
 // Navbar Component (Left Sidebar)
-const Navbar = ({ activeTab, setActiveTab }) => {
+const Navbar = () => {
+  const location = useLocation();
+  
   const sidebarLinks = [
-    { name: "home", icon: homePng },
-    { name: "projects", icon: projectspng },
-    { name: "contact", icon: contactpng },
+    { name: "home", icon: homePng, path: "/" },
+    { name: "projects", icon: projectspng, path: "/projects" },
+    { name: "contact", icon: contactpng, path: "/contact" },
   ];
 
   const socialLinks = [
@@ -42,19 +44,18 @@ const Navbar = ({ activeTab, setActiveTab }) => {
           <h3 className="navbar-title">navigation</h3>
           <div className="nav-links">
             {sidebarLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href="#"
+                to={link.path}
                 className={`nav-link ${
-                  activeTab === link.name
+                  location.pathname === link.path
                     ? "bg-gray-200 text-gray-900"
                     : "text-gray-600 hover:text-gray-800 hover:bg-gray-100"
                 }`}
-                onClick={() => setActiveTab(link.name)}
               >
                 <img src={link.icon} alt={`${link.name} icon`} className="nav-icon" />
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 

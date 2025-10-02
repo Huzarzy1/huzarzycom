@@ -1,54 +1,46 @@
 import React from 'react';
-// import '../styles/Contact.css';
-import github from '../assets/github.png';
-import linkedin from '../assets/linkedin.webp';
-import insta from '../assets/ig.png';
+import '../styles/Contact.css';
+import arrow from '../assets/arrow.png';
 
-function Contact() {
-    return (
-        <div class="container">
-            <main class="contact-content">
-                <section class="contact-section">
-                    <div class="email-section">
-                        <h2>Get in Touch!</h2>
-                        <div class="email-placeholder">
-                            <p><b>Email: </b>Bkuciapski1@gmail.com</p>
-                        </div>
-                    </div>
 
-                    <h2>Social Media</h2>
-                    <div class="social-media-grid">
-                        <div class="social-item">
-                            <div className="social-image">
-                            <a href="https://www.linkedin.com/in/kuciapski/" target="_blank" rel="noopener noreferrer">
-                                <img src={linkedin} alt="LinkedIn" className='image' />
-                            </a>
-                            </div>
-                            <p>LinkedIn</p>
-                        </div>
+const Contact = () => {
+  return (
+    <>
 
-                        <div class="social-item">
-                            <div className="social-image">
-                            <a href="https://github.com/Huzarzy1" target="_blank" rel="noopener noreferrer">
-                                <img src={github} alt="GitHub" className='image' />
-                            </a>
-                            </div>
-                            <p>GitHub</p>
-                        </div>
+    <div className="page-content">
+      <div className="welcome-section" id="welcome">
+        <h2 className="page-title">Contact</h2>
+      </div>
 
-                        <div class="social-item">
-                            <div className="social-image">
-                            <a href="https://www.instagram.com/kuciapscy/" target="_blank" rel="noopener noreferrer">
-                                <img src={insta} alt="Instagram" className='image'/>
-                            </a>
-                            </div>
-                            <p>Instagram</p>
-                        </div>
-                    </div>
-                </section>
-            </main>
+      <div className="content-sections">
+        <div className="content-section" id="section1">
+          <h3 className="section-title">Socials</h3>
+          <div className="content-item">
+            <p className="item-description">
+              My Socials can be found here on the page navbar.
+            </p>
+          </div>
+          <div className="image-placeholder">
+                <img id='arrow' src={arrow} alt="arrow" className="prague-image" />
+          </div>
         </div>
-    );
-}
+ 
 
+        {/* Email Section */}
+        <div className="content-section" id="section3">
+          <h3 className="section-title">E-Mail</h3>
+          <div className="content-item">
+            <p className="item-description">
+                You can also reach out to me via email at <b>bkuciapski1@gmail.com (personal)</b>, or <b>bkuciapski@dal.ca (school)</b>.
+            </p>
+          </div>
+        </div>
+          <footer className="footer">
+            <p>© 2025 Brandon Kuciapski. huzarzy<span className="bold">com</span></p>
+          </footer>
+      </div>
+    </div>
+    </>
+  );
+};
 export default Contact;
