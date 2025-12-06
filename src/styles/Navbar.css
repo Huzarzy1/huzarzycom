@@ -1,8 +1,13 @@
+/* =============================
+   FONT IMPORTS
+   ============================= */
+
 @font-face {
   font-family: 'Myriad Pro Regular';
   font-style: normal;
   font-weight: normal;
-  src: local('Myriad Pro Regular'), url('../fonts/MYRIADPRO-REGULAR.OTF') format('opentype');
+  src: local('Myriad Pro Regular'),
+       url('../fonts/MYRIADPRO-REGULAR.OTF') format('opentype');
 }
 
 @font-face {
@@ -15,6 +20,9 @@
   font-style: normal;
 }
 
+/* =============================
+   DESKTOP NAVBAR (default)
+   ============================= */
 
 .Navbar {
   grid-area: navbar;
@@ -22,12 +30,14 @@
   border: 1px solid #dfdfdf;
   border-radius: 10px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  height: calc(100vh - 425px);
+  height: calc(100vh - 500px);
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .navbar-content {
-  height: 100%;
+  flex: 1;
   overflow-y: auto;
 }
 
@@ -36,43 +46,49 @@
   font-weight: bold;
   font-family: 'Myriad Pro Regular', sans-serif;
   color: #565656;
-  padding-left: 12px;
+  padding: 10px 12px;
   border: 2px solid #dfdfdf;
   border-top: none;
   border-radius: 8px;
   background: linear-gradient(#efefef, #cecece, #efefef);
-
-  
 }
+
+/* NAV LINKS */
 
 .nav-links {
   display: flex;
   flex-direction: column;
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 8px 0;
 }
 
-.nav-link, .social-link {
-  display: block;
+.nav-link,
+.social-link {
+  display: flex;
+  align-items: center;
   padding: 12px 16px;
-  color: #131064;
+  color: #122260;
   text-decoration: none;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: bold;
+  font-family: 'Myriad Pro Regular', sans-serif;
   border-radius: 8px;
   transition: all 0.2s ease;
-  /* font-family: 'ITC Avant Garde Gothic', sans-serif; */
-  font-family: 'Myriad Pro Regular', sans-serif;
-  font-weight: bold;
+  border-bottom: 1px solid #e5e5e5;
 }
 
+.nav-link:last-child,
+.social-link:last-child {
+  border-bottom: none;
+}
 
-.nav-link:hover, .social-link:hover {
+.nav-link:hover,
+.social-link:hover {
   color: #1f2937;
   background-color: #f3f4f6;
 }
 
-.nav-link.active, .social-link.active {
+.nav-link.active,
+.social-link.active {
   background-color: #e5e7eb;
   color: #111827;
 }
@@ -88,44 +104,64 @@
   margin-bottom: 16px;
 }
 
-.nav-icon {
-  width: 32px;
-  height: 32px;
-  margin-right: 16px;
-  vertical-align: middle;
-  border-radius: 4px;
-}
-
-
-.nav-link,
-.social-link {
-  display: flex;
-  align-items: center;
-  padding: 12px 16px;
-  color: #122260;
-  text-decoration: none;
-  font-size: 0.875rem;
-  font-weight: 500;
-  border-radius: 8px;
-  transition: all 0.2s ease;
-  /* font-family: 'ITC Avant Garde Gothic', sans-serif; */
-  font-weight: bold;
-  font-family: 'Myriad Pro Regular', sans-serif;
-  border-bottom: 1px solid #e5e5e5; 
-}
-
-.nav-link:last-child,
-.social-link:last-child {
-  border-bottom: none; 
-}
-
+/* ICONS */
 .nav-icon {
   width: 18px;
   height: 18px;
   margin-right: 8px;
-  vertical-align: middle;
+  border-radius: 4px;
 }
 
+/* =============================
+   MOBILE NAVBAR (< 768px)
+   ============================= */
 
+@media (max-width: 768px) {
+  .Navbar {
+    height: auto;
+    width: 100%;
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .navbar-content {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    height: auto;
+    width: 100%;
+  }
+
+  /* Navbar title hidden on mobile (optional — tell me if you want it visible!) */
+  .navbar-title {
+    display: none;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    padding: 0;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .nav-link,
+  .social-link {
+    padding: 10px 6px;
+    font-size: 0.8rem;
+    border-bottom: none;
+  }
+
+  .nav-icon {
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+  }
+}
 

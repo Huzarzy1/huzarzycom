@@ -12,13 +12,12 @@
   border-radius: 10px;
   border: 1px solid #dfdfdf;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  height: calc(100vh - 220px);
+  height: calc(100vh - 300px);
   overflow: hidden;
 }
 
 .adboard-content {
   /* padding: 24px; */
-  height: 100%;
   overflow-y: auto;
 }
 

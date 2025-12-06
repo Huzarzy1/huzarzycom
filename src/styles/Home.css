@@ -1,31 +1,40 @@
+/* ========================= FONTS ========================= */
 @font-face {
   font-family: 'ITC Avant Garde Gothic';
-  src: local('ITC Avant Garde Gothic Bk'), local('ITC-Avant-Garde-Gothic-Bk'),
-      url('../fonts/ITCAvantGardeStd-Bk.woff2') format('woff2'),
-      url('../fonts/ITCAvantGardeStd-Bk.woff') format('woff'),
-      url('../fonts/ITCAvantGardeStd-Bk.ttf') format('truetype');
+  src: local('ITC Avant Garde Gothic Bk'),
+       local('ITC-Avant-Garde-Gothic-Bk'),
+       url('../fonts/ITCAvantGardeStd-Bk.woff2') format('woff2'),
+       url('../fonts/ITCAvantGardeStd-Bk.woff') format('woff'),
+       url('../fonts/ITCAvantGardeStd-Bk.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Myriad Pro Regular';
-  font-style: normal;
+  src: local('Myriad Pro Regular'),
+       url('../fonts/MYRIADPRO-REGULAR.OTF') format('opentype');
   font-weight: normal;
-  src: local('Myriad Pro Regular'), url('../fonts/MYRIADPRO-REGULAR.OTF') format('opentype');
+  font-style: normal;
 }
 
+/* ========================= LAYOUT ========================= */
 .main-content {
   grid-area: main;
   background: white;
   border: 1px solid #e5e7eb;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px 8px 0 0;
   height: calc(100vh - 136px);
   overflow-y: auto;
 }
 
+.main-content::-webkit-scrollbar {
+  display: none;
+}
+
 .page-content {
-  padding: 32px;
+  padding: clamp(16px, 4vw, 32px);
   height: 100%;
   font-family: 'ITC Avant Garde Gothic', sans-serif;
 }
@@ -35,18 +44,17 @@
 }
 
 .page-title {
-  font-size: 1.875rem;
+  font-size: clamp(1.5rem, 3vw, 1.875rem);
   color: #2b456a;
   margin-bottom: 16px;
   letter-spacing: 0.05em;
-  font-family: 'myriad pro regular', sans-serif;
+  font-family: 'Myriad Pro Regular', sans-serif;
   font-weight: bold;
 }
 
 .page-subtitle {
-  font-size: 1.125rem;
+  font-size: clamp(1rem, 2vw, 1.125rem);
   color: #6b7280;
-  font-family: 'ITC Avant Garde Gothic', sans-serif;
 }
 
 .content-sections {
@@ -58,38 +66,31 @@
 .content-section {
   background-color: #f9fafb;
   border-radius: 6px;
-  padding: 24px;
+  padding: clamp(16px, 3vw, 24px);
 }
 
-#academics {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 16px;
-  gap: 8px;
-}
-
-.content-section .section-title {
-  font-size: 1.25rem;
-  color: #2b456a;
-  margin-bottom: 16px;
-  font-family: 'myriad pro regular', sans-serif;
-  font-weight: bold;
-}
-
+/* ================ CONTENT GRID ================ */
 .content-grid {
   display: grid;
-  grid-template-columns: 1fr;  
+  grid-template-columns: 1fr;
   gap: 16px;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
 }
 
-.content-card {
+@media (min-width: 768px) {
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+}
+
+.content-card,
+.content-item {
   background: white;
   border: 1px solid #f3f4f6;
   border-radius: 6px;
-  /* padding: 16px; */
+  padding: 16px;
   transition: border-color 0.2s ease;
 }
 
@@ -97,69 +98,60 @@
   border-color: #e5e7eb;
 }
 
-.card-label {
+.card-label,
+.item-description,
+.page-subtitle {
+  font-family: 'ITC Avant Garde Gothic', sans-serif;
+}
+
+.card-label,
+.item-description {
   font-size: 0.875rem;
   color: #6b7280;
-  margin-bottom: 8px;
-  font-family: 'ITC Avant Garde Gothic', sans-serif;
-}
-
-.card-content {
-  font-weight: 500;
-  color: #1f2937;
-  display: flex;
-  flex-direction: column;
-  font-family: 'ITC Avant Garde Gothic', sans-serif;
-}
-
-.content-list {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.content-item {
-  background: white;
-  border: 1px solid #f3f4f6;
-  border-radius: 6px;
-  padding: 16px;
 }
 
 .item-title {
   font-weight: 500;
   color: #1f2937;
   margin-bottom: 8px;
-  font-family: 'ITC Avant Garde Gothic', sans-serif;
 }
 
-.item-description {
-  font-size: 0.875rem;
-  color: #6b7280;
-  font-family: 'ITC Avant Garde Gothic', sans-serif;
+/* ======================= ACADEMICS ROW ======================= */
+#academics {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
 }
 
-#fcs-logo {
-  width: 320px;
-  height: 120px;
-  object-fit: contain;
-  margin-left: 0;
+@media (min-width: 768px) {
+  #academics {
+    flex-direction: row;
+    align-items: center;
+  }
 }
 
+/* ======================= IMAGES ======================= */
 .image-placeholder {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  padding: 0;
+}
+
+#fcs-logo {
+  width: clamp(180px, 40vw, 320px);
+  height: auto;
+  object-fit: contain;
 }
 
 #prague {
-  width: 300px;
-  height: 425px;
+  width: clamp(180px, 40vw, 300px);
+  height: auto;
   border-radius: 6px;
   padding-top: 10px;
 }
 
+/* ======================= FORMS ======================= */
 .contact-form-large {
   display: flex;
   flex-direction: column;
@@ -177,17 +169,6 @@
   color: #1f2937;
 }
 
-.form-input::placeholder,
-.form-textarea::placeholder {
-  color: #6b7280;
-}
-
-.form-input:focus,
-.form-textarea:focus {
-  outline: none;
-  background-color: white;
-}
-
 .form-textarea {
   resize: vertical;
   min-height: 120px;
@@ -203,30 +184,13 @@
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s ease;
-  align-self: flex-start;
 }
 
 .form-button:hover {
   background-color: #d1d5db;
 }
 
-.back-link {
-  color: #3b82f6;
-  text-decoration: none;
-  font-weight: 500;
-  margin-top: 16px;
-  display: inline-block;
-}
-
-.back-link:hover {
-  text-decoration: underline;
-}
-
-.main-content::-webkit-scrollbar {
-  display: none;
-}
-
-/* ================= NAVBAR ================= */
+/* ======================= NAVBAR ======================= */
 .top-navbar {
   position: sticky;
   top: 0;
@@ -240,37 +204,39 @@
     #2c2c2c 100%
   );
   border: 1px solid #1a1a1a;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3),
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
     0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 .top-navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   display: flex;
-  gap: 50px;
+  gap: clamp(16px, 5vw, 50px);
+  list-style: none;
 }
 
 .top-navbar li {
   font-size: 14px;
   font-weight: 500;
-  font-family: 'myriad pro regular', sans-serif;
+  font-family: 'Myriad Pro Regular', sans-serif;
   cursor: pointer;
   padding: 0 8px;
   line-height: 44px;
-  transition: background 0.2s ease, color 0.2s ease;
+  transition: background 0.2s ease;
 }
 
-.top-navbar li a {
+.top-navbar li:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.top-navbar a {
   color: #bdbdbd;
   text-decoration: none;
-  cursor: pointer;
 }
 
 .nav-logo {
@@ -287,15 +253,9 @@
   margin: 0;
   line-height: 32px;
   text-align: center;
-  color: #818181;
 }
 
-.top-navbar li:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 4px;
-}
-
-/* ================= FOOTER ================= */
+/* ======================= FOOTER (UNIFIED) ======================= */
 .footer {
   height: 84px;
   background: linear-gradient(#f0f0f0, #cfcfcf);
@@ -304,22 +264,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 605px;
-  left: 50%;
-  position: relative;
-  margin-left: -303px;
+  margin: 0 -16px;
 }
 
-footer p .bold {
-  font-weight: bold;
+@media (min-width: 768px) {
+  .footer {
+    margin: 0 -24px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer {
+    margin: 0 -40px;
+  }
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-/* Remove duplicate scroll-behavior at the bottom and add scroll margins */
 #welcome, #section1, #section2, #section3, #academics {
   scroll-margin-top: 44px;
   padding-top: 16px;
