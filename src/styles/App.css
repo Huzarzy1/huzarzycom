@@ -20,12 +20,11 @@ body::-webkit-scrollbar {
    =========================== */
 .app-layout {
   display: grid;
-  grid-template-columns: 224px 1fr 224px;
+  grid-template-columns: 224px 1fr;
   grid-template-rows: auto 1fr;
   grid-template-areas:
-    "header header header"
-    "navbar main adboard";
-
+    "header header"
+    "navbar main";
   min-height: 100vh;
 
   gap: 16px;
@@ -46,8 +45,8 @@ body::-webkit-scrollbar {
    =========================== */
 @media (min-width: 1600px) {
   .app-layout {
-    padding-left: 325px;
-    padding-right: 325px;
+    padding-left: 400px;
+    padding-right: 400px;
   }
 }
 

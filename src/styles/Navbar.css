@@ -36,9 +36,17 @@
   flex-direction: column;
 }
 
+.Navbar::-webkit-scrollbar {
+  display: none;
+}
+
 .navbar-content {
   flex: 1;
   overflow-y: auto;
+}
+
+.navbar-content::-webkit-scrollbar {
+  display: none;
 }
 
 .navbar-title {

@@ -17,7 +17,6 @@
 }
 
 .adboard-content {
-  /* padding: 24px; */
   overflow-y: auto;
 }
 
@@ -51,7 +50,7 @@
 
   
 }
-/* Responsive Design */
+
 @media (max-width: 1024px) {
   .app-layout {
     grid-template-columns: 200px 1fr 200px;

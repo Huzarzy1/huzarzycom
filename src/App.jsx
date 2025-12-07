@@ -6,7 +6,7 @@ import Formula1 from './pages/Formula1';
 import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import Header from './components/Header';
-import Adboard from './components/Adboard';
+// import Adboard from './components/Adboard';
 import Footer from './components/Footer';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
@@ -33,7 +33,7 @@ function App() {
         </div>
 
         {/* Adboard on the right */}
-        <Adboard />
+        {/* <Adboard /> */}
 
         {/* Optional footer (spans full width under everything) */}
         {/* <Footer /> */}
