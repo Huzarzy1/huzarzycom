@@ -95,6 +95,55 @@
 .tire{ width:36px; height:auto; }
 
 
+.driver-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1a1a1a;
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  position: relative;
+}
+
+.name-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.driver-name {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: bold;
+}
+
+.fastest-lap-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delta {
+  color: #ccc;
+  font-size: 0.9rem;
+  margin-right: 8px;
+}
+
+.in-pit {
+  background-color: yellow;
+  color: black;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
 
 
 
