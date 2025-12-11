@@ -147,7 +147,6 @@
     width: 100%;
   }
 
-  /* Navbar title hidden on mobile (optional — tell me if you want it visible!) */
   .navbar-title {
     display: none;
   }

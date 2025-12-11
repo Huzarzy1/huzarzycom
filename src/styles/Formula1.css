@@ -1,0 +1,212 @@
+/* ========================= FONTS ========================= */
+@font-face {
+  font-family: 'ITC Avant Garde Gothic';
+  src: local('ITC Avant Garde Gothic Bk'),
+       local('ITC-Avant-Garde-Gothic-Bk'),
+       url('../fonts/ITCAvantGardeStd-Bk.woff2') format('woff2'),
+       url('../fonts/ITCAvantGardeStd-Bk.woff') format('woff'),
+       url('../fonts/ITCAvantGardeStd-Bk.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Myriad Pro Regular';
+  src: local('Myriad Pro Regular'),
+       url('../fonts/MYRIADPRO-REGULAR.OTF') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.main-content {
+  grid-area: main;
+  background: white;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  border-radius: 8px 8px 0 0;
+  height: calc(100vh - 136px);
+  overflow-y: auto;
+}
+
+.main-content::-webkit-scrollbar {
+  display: none;
+}
+
+.page-content {
+  padding: clamp(16px, 4vw, 32px);
+  height: 100%;
+  font-family: 'ITC Avant Garde Gothic', sans-serif;
+}
+
+.content-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.content-section {
+  background-color: #f9fafb;
+  border-radius: 6px;
+  padding: clamp(16px, 3vw, 24px);
+}
+
+
+/* PAGE LAYOUT */
+.page-content{ padding: 20px; max-width:1100px; margin: 0 auto; }
+.content-sections{ display:flex; flex-direction:column; gap:20px; }
+
+/* HEADER */
+.f1-container{ display:flex; flex-direction:column; gap:16px; }
+.header-row{ display:flex; justify-content:space-between; align-items:center; gap:20px; }
+.event-title{ font-size:26px; margin:0; color:var(--text); }
+.session-title{ font-size:16px; margin:2px 0 0 0; color:var(--muted); font-weight:600; }
+
+/* LAP COUNT small badge */
+.lap-count{ font-size:13px; color:var(--muted); background: rgba(255,255,255,0.03); padding:8px 12px; border-radius:10px; }
+
+/* LEADERBOARD */
+.leaderboard{ display:flex; flex-direction:column; gap:10px; margin-top:6px; }
+
+/* DRIVER CARD */
+.driver-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+  padding:10px 12px;
+  border-radius:10px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  transition: transform 160ms ease;
+}
+.driver-card:hover{ transform: translateY(-4px); }
+
+.left{ display:flex; align-items:center; gap:12px; min-width: 0; }
+.position{ width:40px; text-align:center; font-weight:700; font-size:18px; color:var(--accent); }
+.headshot{ width:48px; height:48px; border-radius:50%; object-fit:cover; border: 2px solid rgba(255,255,255,0.04); background:#0b0b0d; }
+
+.name-block{ display:flex; flex-direction:column; min-width:0; }
+.driver-name{ font-weight:700; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:260px; }
+.team-name{ font-weight:600; font-size:13px; opacity:0.95; margin-top:2px; }
+
+/* RIGHT SIDE (lap time + tyre) */
+.right{ display:flex; align-items:center; gap:12px; min-width:120px; justify-content:flex-end; }
+.laptime{ font-size:16px; font-weight:700; color:var(--text); }
+.tire{ width:36px; height:auto; }
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+}
+
+@media (max-width:720px){
+  .driver-name{ max-width:140px; font-size:14px; }
+  .position{ width:32px; font-size:16px; }
+  .headshot{ width:40px; height:40px; }
+  .right{ min-width:80px; }
+}
+
+/* ======================= NAVBAR ======================= */
+.top-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 44px;
+  background: linear-gradient(
+    to bottom,
+    #7f7f7f 0%,
+    #5c5c5c 50%,
+    #444 51%,
+    #2c2c2c 100%
+  );
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.top-navbar ul {
+  display: flex;
+  gap: clamp(16px, 5vw, 50px);
+  list-style: none;
+}
+
+.top-navbar li {
+  font-size: 14px;
+  font-weight: 500;
+  font-family: 'Myriad Pro Regular', sans-serif;
+  cursor: pointer;
+  padding: 0 8px;
+  line-height: 44px;
+  transition: background 0.2s ease;
+}
+
+.top-navbar li:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+
+.top-navbar a {
+  color: #bdbdbd;
+  text-decoration: none;
+}
+
+.nav-logo {
+  font-family: 'ITC Avant Garde Gothic', sans-serif;
+  font-size: 18px;
+  color: #5e5e5e;
+  background-color: #ffffff;
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+}
+
+.nav-logo p {
+  margin: 0;
+  line-height: 32px;
+  text-align: center;
+}
+
+/* ======================= FOOTER (UNIFIED) ======================= */
+.footer {
+  height: 84px;
+  background: linear-gradient(#f0f0f0, #cfcfcf);
+  border-top: 1px solid #bdbdbd;
+  font-family: 'ITC Avant Garde Gothic', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 -16px;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    margin: 0 -24px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .footer {
+    margin: 0 -40px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#welcome, #section1, #section2, #section3, #academics {
+  scroll-margin-top: 44px;
+  padding-top: 16px;
+}
