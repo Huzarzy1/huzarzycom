@@ -8,11 +8,28 @@
   font-style: normal;
 }
 
+:root {
+  --header-bg: linear-gradient(#cccccc, #989898);
+  --header-text: #000;
+
+  --bg-color: #ffffff;
+  --text-color: #111111;
+}
+
+[data-theme="dark"] {
+  --header-bg: linear-gradient(#1d1d1d, #404040);
+  --header-text: #ffffff;
+
+  --bg-color: #111111;
+  --text-color: #ffffff;
+}
+
+
 header {
   grid-area: header;
   height: 120px;
-  background: linear-gradient(#cccccc, #989898);
-  color: #000;
+  background: var(--header-bg);
+  color: var(--header-text);
   position: relative;
   display: flex;
   align-items: flex-end;
@@ -20,6 +37,29 @@ header {
   padding: 12px 20px;
   font-family: 'ITC Avant Garde Gothic', sans-serif;
 }
+
+header {
+  position: relative;
+  overflow: hidden;
+  color: var(--header-text);
+}
+
+/* background layer */
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--header-bg);
+  transition: background 0.5s ease;
+  z-index: 0;
+}
+
+/* keep content above background */
+header > * {
+  position: relative;
+  z-index: 1;
+}
+
 
 header h1 {
   font-size: 36px;  
@@ -62,6 +102,78 @@ header h1 .bold {
   opacity: 1;
   outline: 2px solid #000;
 }
+
+
+
+:root {
+  --bg-color: #ffffff;
+  --text-color: #111111;
+}
+
+[data-theme="dark"] {
+  --bg-color: #111111;
+  --text-color: #ffffff;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s, color 0.5s;
+}
+
+.header h1 {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.clickable-text {
+  position: relative;
+  cursor: pointer;
+}
+
+.jump-icon {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: jump 0.4s ease-out forwards; /* faster & smoother */
+}
+
+@keyframes jump {
+  0% { transform: translateX(-50%) translateY(0); opacity: 0; }
+  12.5% { transform: translateX(-50%) translateY(-10px); opacity: 1; }
+  25% { transform: translateX(-50%) translateY(-20px); opacity: 1; }
+  50% { transform: translateX(-50%) translateY(-35px); opacity: 1; }
+  75% { transform: translateX(-50%) translateY(-20px); opacity: 1; }
+  87.5% { transform: translateX(-50%) translateY(-10px); opacity: 1; }
+  100% { transform: translateX(-50%) translateY(0); opacity: 0; }
+}
+
+/* Language flags */
+.lang-flags {
+  display: flex;
+  gap: 0.5rem;
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+
+.lang-flags img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.lang-flags img.active,
+.lang-flags img:hover {
+  opacity: 1;
+}
+
 
 
 

@@ -1,16 +1,52 @@
 /* GLOBAL RESETS */
+
+/* Light mode (default) */
+:root {
+  /* --bg-color: #ffffff;
+  --text-color: #374151; */
+  /* --header-bg: rgba(255, 255, 255, 0.9); */
+  /* --navbar-bg: rgba(255, 255, 255, 0.75); */
+  /* --accent-color: #4781D7; */
+  --background-image: url('../assets/bk-bg2.png');
+}
+
+/* Dark mode */
+body.dark-mode {
+  /* --bg-color: #111827;
+  --text-color: #f3f4f6; */
+  /* --header-bg: rgba(30, 30, 30, 0.9); */
+  /* --navbar-bg: rgba(20, 20, 20, 0.75); */
+  /* --accent-color: #facc15; */
+  --background-image: url('../assets/bk-bg-dark.png');
+}
+
+body {
+  font-family: 'Avant Garde', AvantGarde-Book, AvantGarde-Medium, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+  background-color: var(--bg-color);
+  background-image: var(--background-image);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background 0.5s ease, color 0.5s ease;
+}
+
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
+/* body {
   font-family: 'Avant Garde', AvantGarde-Book, AvantGarde-Medium, 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
   background: transparent;
   color: #374151;
   line-height: 1.6;
-}
+} */
+
+
 body::-webkit-scrollbar {
   display: none;
 }
@@ -30,7 +66,7 @@ body::-webkit-scrollbar {
   gap: 16px;
   padding: 0 225px;
 
-  background-image: url('../assets/bk-bg2.png');
+  /* background-image: url('../assets/bk-bg2.png'); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;

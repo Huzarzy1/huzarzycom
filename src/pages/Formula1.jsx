@@ -1,13 +1,17 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/Formula1.css";
+
 import red_tire from "../assets/tires/red-tire.webp";
 import yellow_tire from "../assets/tires/yellow-tire.webp";
 import white_tire from "../assets/tires/white-tire.webp";
 import green_tire from "../assets/tires/green-tire.webp";
 import blue_tire from "../assets/tires/blue-tire.webp";
 import default_tire from "../assets/tires/red-tire.webp";
+
 import fastestLapIcon from "../assets/tires/green-tire.webp"; 
+
+const F1_KEY = process.env.F1_KEY;
 
 const TYRE_IMAGE_FOR = {
   SOFT: red_tire,
@@ -34,7 +38,7 @@ const Formula1 = () => {
 
     const load = async () => {
       try {
-        const res = await axios.get("http://192.168.2.18:5000/leaderboard", { timeout: 3000 });
+        const res = await axios.get(F1_KEY, { timeout: 3000 });
         if (!mounted) return;
         setData(res.data);
         setError(null);
