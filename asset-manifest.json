@@ -1,16 +1,26 @@
 {
   "files": {
-    "main.css": "/static/css/main.5ea36d20.css",
-    "main.js": "/static/js/main.f42f9ee7.js",
+    "main.css": "/static/css/main.9ea5f991.css",
+    "main.js": "/static/js/main.ac68fac8.js",
     "static/js/488.0c108be1.chunk.js": "/static/js/488.0c108be1.chunk.js",
     "static/media/Screenshot 2025-09-30 174353.png": "/static/media/Screenshot 2025-09-30 174353.d9c296b246d600f99149.png",
+    "static/media/en.png": "/static/media/en.e9e47aeffbf5d8770293.png",
     "static/media/ig.png": "/static/media/ig.55012545d2926faf6505.png",
+    "static/media/pl.png": "/static/media/pl.14a0e13c5001a9cb68cc.png",
     "static/media/com.burbn.instagram-large.png": "/static/media/com.burbn.instagram-large.a86731c433415e2f7d5a.png",
+    "static/media/de.png": "/static/media/de.f8ee7d7067b3851d803e.png",
+    "static/media/com.google.Maps-large.png": "/static/media/com.google.Maps-large.38ee6c1d4cfe72adeb6a.png",
     "static/media/com.apple.AppStore-large.png": "/static/media/com.apple.AppStore-large.dabdb355f7237c28e597.png",
     "static/media/com.apple.mobileslideshow-large.png": "/static/media/com.apple.mobileslideshow-large.f46440f997d4856cf140.png",
     "static/media/arrow.png": "/static/media/arrow.af9ae1b12b49818e3c6a.png",
+    "static/media/yellow-tire.webp": "/static/media/yellow-tire.06fb7301e6d6a0974eed.webp",
+    "static/media/white-tire.webp": "/static/media/white-tire.9758974bdd92f0b35527.webp",
+    "static/media/blue-tire.webp": "/static/media/blue-tire.f1dcdd89cf0f2f86b991.webp",
+    "static/media/green-tire.webp": "/static/media/green-tire.877aa6a4925fa6bca6e0.webp",
+    "static/media/red-tire.webp": "/static/media/red-tire.625ae9d0ae695b707666.webp",
     "static/media/com.apple.MobileAddressBook-large.png": "/static/media/com.apple.MobileAddressBook-large.0f756b1a226eb84bb863.png",
     "static/media/MYRIADPRO-REGULAR.OTF": "/static/media/MYRIADPRO-REGULAR.6c518fcde55bd3397d56.OTF",
+    "static/media/fr.webp": "/static/media/fr.7eaf35255310455b3742.webp",
     "static/media/ITCAvantGardeStd-Bk.ttf": "/static/media/ITCAvantGardeStd-Bk.340c5ba233c574d49756.ttf",
     "static/media/bk-bg2.png": "/static/media/bk-bg2.8cdffacea3cc18a91468.png",
     "static/media/ITCAvantGardeStd-Bk.woff": "/static/media/ITCAvantGardeStd-Bk.ae29d873e438d4a0eb79.woff",
@@ -20,12 +30,12 @@
     "static/media/fb.png": "/static/media/fb.ce691ca7e7ca093c0a38.png",
     "static/media/linkedin.webp": "/static/media/linkedin.bbb2414bc205a327d09b.webp",
     "index.html": "/index.html",
-    "main.5ea36d20.css.map": "/static/css/main.5ea36d20.css.map",
-    "main.f42f9ee7.js.map": "/static/js/main.f42f9ee7.js.map",
+    "main.9ea5f991.css.map": "/static/css/main.9ea5f991.css.map",
+    "main.ac68fac8.js.map": "/static/js/main.ac68fac8.js.map",
     "488.0c108be1.chunk.js.map": "/static/js/488.0c108be1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5ea36d20.css",
-    "static/js/main.f42f9ee7.js"
+    "static/css/main.9ea5f991.css",
+    "static/js/main.ac68fac8.js"
   ]
 }
