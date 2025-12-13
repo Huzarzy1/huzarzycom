@@ -34,7 +34,7 @@ const Formula1 = () => {
 
     const load = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/leaderboard", { timeout: 3000 });
+        const res = await axios.get("http://192.168.2.18:5000/leaderboard", { timeout: 3000 });
         if (!mounted) return;
         setData(res.data);
         setError(null);
@@ -68,7 +68,7 @@ const Formula1 = () => {
             <div className="f1-container">
               <h1 className="event-title">Loading event...</h1>
               <h2 className="session-title">Loading session...</h2>
-              <p>{error ?? "Waiting for live feed..."}</p>
+              <p className="session-title">{error ?? "Waiting for live feed..."}</p>
             </div>
             <footer className="footer">
               <p>© 2025 Brandon Kuciapski. huzarzy<span className="bold">com</span></p>
@@ -118,10 +118,6 @@ const Formula1 = () => {
     })
     .sort((a, b) => a.numericPos - b.numericPos);
 
-  // determine fastest lap time
-  const fastestLapValue = Math.min(
-    ...drivers.map(d => parseFloat(d.LastLapValue?.replace(":", ".") ?? Infinity))
-  );
 
   return (
     <>
@@ -157,7 +153,7 @@ const Formula1 = () => {
                 const tyreImg = d.Tyres?.ImageUrl ?? TYRE_IMAGE_FOR.DEFAULT;
                 const tyreAlt = d.Tyres?.Compound ?? "tyre";
 
-                const isFastestLap = parseFloat(lap.replace(":", ".")) === fastestLapValue;
+                const isFastestLap = d.BestLapTime?.OverallFastest === true;
                 const interval = d.IntervalToPositionAhead?.Value ?? null;
                 const inPit = d.InPit ?? false;
 

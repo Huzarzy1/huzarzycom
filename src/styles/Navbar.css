@@ -30,7 +30,7 @@
   border: 1px solid #dfdfdf;
   border-radius: 10px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  height: calc(100vh - 500px);
+  height: calc(100vh - 470px);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -94,6 +94,22 @@
   color: #1f2937;
   background-color: #f3f4f6;
 }
+
+
+/* Indented sub-item under projects */
+.nav-sublink {
+  padding-left: 40px !important;  /* pushes it right */
+  font-size: 0.92rem;
+  padding: 5px 16px; 
+}
+
+/* Make the sublink icon smaller and dimmer */
+.nav-sublink .nav-icon {
+  width: 16px;
+  height: 16px;
+}
+
+
 
 .nav-link.active,
 .social-link.active {

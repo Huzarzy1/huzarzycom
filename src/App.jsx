@@ -8,6 +8,8 @@ import NotFound from './pages/NotFound';
 import Header from './components/Header';
 // import Adboard from './components/Adboard';
 import Footer from './components/Footer';
+import "./i18n";
+
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 

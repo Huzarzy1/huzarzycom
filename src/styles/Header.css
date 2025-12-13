@@ -29,7 +29,39 @@ header h1 {
 
 header h1 .bold {
   font-weight: bold;
-  /* text-shadow: 0.5px 0.5px 0 #000;  */
-  /* -webkit-text-stroke: 0.3px #000; */
-  /* letter-spacing: 0.05em;  */
 }
+
+/* .header {
+  position: relative;
+  padding: 1.5rem 2rem;
+} */
+
+.lang-flags {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  display: flex;
+  gap: 6px;
+}
+
+.lang-flags img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.lang-flags img:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.lang-flags img.active {
+  opacity: 1;
+  outline: 2px solid #000;
+}
+
+
+
