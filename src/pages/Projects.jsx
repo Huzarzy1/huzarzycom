@@ -112,17 +112,17 @@ function Projects() {
       <nav className="top-navbar">
         <ul>
           <li>
-            <a href="#welcome">{t("navbar.welcome")}</a>
+            <a href="#featured">{t("navbar.featured")}</a>
           </li>
           <li>
-            <a href="#section1">{t("navbar.about")}</a>
+            <a href="#other-projects">{t("navbar.others")}</a>
           </li>
-          <li>
+          {/* <li>
             <a href="#section2">{t("navbar.interests")}</a>
           </li>
           <li>
             <a href="#section3">{t("navbar.stack")}</a>
-          </li>
+          </li> */}
         </ul>
       </nav>
 
@@ -136,13 +136,92 @@ function Projects() {
               </div>
             </div>
           </div>
+
+            <div className="content-sections">
+
+                {/* Featured Projects */}
+                <div className="fade-section content-section" id="featured-projects">
+                <h3 className="section-title">Featured Work</h3>
+
+                <div className="content-grid" id="featured">
+                    {/* Project 1 */}
+                    <div className="content-card">
+                    <h4 className="item-title">Decentralized Blockchain Node</h4>
+                    <p className="item-description">
+                        Built a peer-to-peer blockchain node with transaction broadcasting, UTXO management,
+                        mining, and consensus logic. Later extended the project with a Java Swing GUI to
+                        visualize node state and interact with the network.
+                    </p>
+                    <p className="item-description">
+                        <strong>Tech:</strong> Java, Networking (Sockets), Cryptography, Swing
+                    </p>
+                    </div>
+
+                    {/* Project 2 */}
+                    <div className="content-card">
+                    <h4 className="item-title">Personal Portfolio Website</h4>
+                    <p className="item-description">
+                        Designed and developed a responsive portfolio using React with scroll-based animations,
+                        reusable components, and theme-aware (light/dark) styling.
+                    </p>
+                    <p className="item-description">
+                        <strong>Tech:</strong> React, JavaScript, CSS, Responsive Design
+                    </p>
+                    </div>
+                </div>
+                </div>
+
+                {/* Additional Projects */}
+                <div className="fade-section content-section" id="other-projects">
+                <h3 className="section-title">Other Projects</h3>
+
+                <div className="content-list">
+                    <div className="content-item">
+                    <h4 className="item-title">Formula 1 Live Standings App</h4>
+                    <p className="item-description">
+                        Built a React-based web app that displays live Formula 1 standings using external APIs,
+                        with protected routes behind an authentication system.
+                    </p>
+                    </div>
+
+                    <div className="content-item">
+                    <h4 className="item-title">Brightspace Assignment Scraper</h4>
+                    <p className="item-description">
+                        Designed a concept for a Raspberry Pi–hosted service that aggregates course deadlines
+                        from Brightspace and outputs them into a continuously updating local dashboard.
+                    </p>
+                    </div>
+
+                    <div className="content-item">
+                    <h4 className="item-title">DualShock 3 Driver Exploration</h4>
+                    <p className="item-description">
+                        Researched and prototyped components of a custom Windows driver for the DualShock 3
+                        controller to better understand USB, HID, and driver-level interactions.
+                    </p>
+                    </div>
+                </div>
+                </div>
+
+                {/* Philosophy / Closing */}
+                <div className="fade-section content-section" id="projects-closing">
+                <h3 className="section-title">How I Build</h3>
+                <div className="content-item">
+                    <p className="item-description">
+                    I prioritize clarity, maintainability, and understanding how systems work under the hood.
+                    I’m most interested in projects that expose real-world constraints—networking, security,
+                    data flow, and user experience.
+                    </p>
+                </div>
+                </div>
+
         </div>
-
-        <footer className="footer">
-            <p>© 2025 Brandon Kuciapski. huzarzy<span className="bold">com</span></p>
-        </footer>
-
+        </div>
       </main>
+
+    <footer className="footer">
+        <p>© 2026 Brandon Kuciapski. huzarzy<span className="bold">com</span></p>
+    </footer>
+
     </div>
   );
 }

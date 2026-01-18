@@ -12,7 +12,9 @@
       "welcome": "Accueil",
       "about": "À propos",
       "interests": "Intérêts",
-      "stack": "Stack Tech"
+      "stack": "Stack Tech",
+      "featured": "Projets en vedette",
+      "others": "Autres projets"
     },
     "welcome": {
       "title": "Bienvenue",
@@ -71,6 +73,6 @@
         "description1": "Le networking et la collaboration sont parmi mes aspects préférés de la tech et de l’apprentissage. Que ce soit pour discuter d’un défi de programmation, je suis toujours heureux de discuter.",
         "description2": "Si vous le souhaitez, vous pouvez également m’envoyer un message sur les réseaux sociaux, ou simplement mettre cette page en favori et me contacter à tout moment. La barre de navigation à gauche est votre passerelle pour rester en contact !"
       },
-      "footer": "© 2025 Brandon Kuciapski. huzarzycom"
+      "footer": "© 2026 Brandon Kuciapski. huzarzycom"
     }
 }

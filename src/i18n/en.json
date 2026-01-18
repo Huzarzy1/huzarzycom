@@ -12,7 +12,9 @@
       "welcome": "Welcome",
       "about": "About",
       "interests": "Interests",
-      "stack": "Stack"
+      "stack": "Stack",
+      "featured": "Featured",
+      "others": "Others"
     },
     "welcome": {
       "title": "Welcome",
@@ -71,6 +73,6 @@
         "description1": "Networking and collaboration are some of my favorite parts of tech and learning. Whether it’s discussing a programming challenge, I’m always happy to chat.",
         "description2": "If you’d like, you can also drop me a message on social media, or just bookmark this page and reach out anytime. The left-hand navbar is your gateway to staying in touch!"
       },
-      "footer": "© 2025 Brandon Kuciapski. huzarzycom"
+      "footer": "© 2026 Brandon Kuciapski. huzarzycom"
     }
 }

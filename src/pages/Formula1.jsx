@@ -202,7 +202,7 @@ const Formula1 = () => {
           </div>
 
           <footer className="footer">
-            <p>© 2025 Brandon Kuciapski. huzarzy<span className="bold">com</span></p>
+            <p>© 2026 Brandon Kuciapski. huzarzy<span className="bold">com</span></p>
           </footer>
         </div>
       </div>

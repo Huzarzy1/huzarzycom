@@ -12,7 +12,9 @@
       "welcome": "Witaj",
       "about": "O mnie",
       "interests": "Zainteresowania",
-      "stack": "Tech Stack"
+      "stack": "Tech Stack",
+      "featured": "Wyróżniony",
+      "others": "Inni"
     },
     "welcome": {
       "title": "Witaj",
@@ -71,6 +73,6 @@
         "description1": "Networking i współpraca to jedne z moich ulubionych aspektów technologii i nauki. Chętnie porozmawiam o wyzwaniu programistycznym lub projekcie.",
         "description2": "Jeśli chcesz, możesz także wysłać mi wiadomość w mediach społecznościowych lub po prostu dodać tę stronę do zakładek i skontaktować się w dowolnym momencie. Lewy pasek nawigacyjny to Twoja brama do pozostania w kontakcie!"
       },
-      "footer": "© 2025 Brandon Kuciapski. huzarzycom"
+      "footer": "© 2026 Brandon Kuciapski. huzarzycom"
     }
 }
