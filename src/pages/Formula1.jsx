@@ -11,7 +11,7 @@ import default_tire from "../assets/tires/red-tire.webp";
 
 import fastestLapIcon from "../assets/tires/green-tire.webp"; 
 
-const F1_KEY = process.env.F1_KEY;
+const F1_KEY = "http://192.168.2.18:5000/leaderboard";
 
 const TYRE_IMAGE_FOR = {
   SOFT: red_tire,
@@ -125,13 +125,13 @@ const Formula1 = () => {
 
   return (
     <>
-      <nav className="top-navbar">
+      {/* <nav className="top-navbar">
         <ul>
           <li><a href="#welcome">welcome</a></li>
           <li><a href="#section1">about</a></li>
           <li><a href="#section2">interests</a></li>
         </ul>
-      </nav>
+      </nav> */}
 
       <div className="page-content">
         <div className="content-sections">

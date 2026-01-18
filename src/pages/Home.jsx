@@ -2,69 +2,59 @@
 import '../styles/Home.css';
 import fcsLogo from '../assets/fcs-logo.png';
 import prague from  '../assets/Screenshot 2025-09-30 174353.png';
-
+import React from "react";
+import { useTranslation } from "react-i18next";
 
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <>
       {/* ================= NAVBAR ================= */}
       <nav className="top-navbar">
-        {/* <div className="nav-logo">
-          <p>bk</p>
-        </div> */}
         <ul>
           <li>
-            <a href="#welcome">welcome</a>
+            <a href="#welcome">{t("navbar.welcome")}</a>
           </li>
           <li>
-            <a href="#section1">about</a>
+            <a href="#section1">{t("navbar.about")}</a>
           </li>
           <li>
-            <a href="#section2">interests</a>
-          </li>
-          {/* <li>
-            <a href="#section3">Section 3</a>
+            <a href="#section2">{t("navbar.interests")}</a>
           </li>
           <li>
-            <a href="#section4">Section 4</a>
-          </li> */}
+            <a href="#section3">{t("navbar.stack")}</a>
+          </li>
         </ul>
       </nav>
 
-
-    <div className="page-content">
-      <div className="welcome-section" id="welcome">
-        <h2 className="page-title">Welcome</h2>
-        <p className="page-subtitle">
-          Hi, I’m Brandon — a Polish/Canadian student passionate about technology, travel, and learning.
-        </p>
-      </div>
-
-      <div className="content-sections">
-        {/* About Me Section */}
-        <div className="content-section" id="section1">
-          <h3 className="section-title">About Me</h3>
-          <div className="content-item">
-            <p className="item-description">
-              I am a <strong>second-year Bachelor of Computer Science (BCS)</strong> student at 
-              <strong> Dalhousie University</strong> in Halifax, Nova Scotia.  
-              My main interests lie in <strong>web/software development</strong> and <strong>cybercrime</strong>.
-            </p>
-          </div>
+      <div className="page-content">
+        {/* Welcome Section */}
+        <div className="fade-section welcome-section" id="welcome">
+          <h2 className="page-title">{t("welcome.title")}</h2>
+          <p className="page-subtitle">{t("welcome.subtitle")}</p>
         </div>
 
+        {/* About Me Section */}
+        <div className="fade-section content-sections">
+          <div className="content-section" id="section1">
+            <h3 className="section-title">{t("about.title")}</h3>
+            <div className="content-item">
+              <p className="item-description">{t("about.description")}</p>
+            </div>
+          </div>
+
         {/* Academic Life Section */}
-        <div className="content-section" id='academics'>
+        <div className="fade-section content-section" id='academics'>
           <div>
-            <h3 className="section-title">Academics</h3>
+            <h3 className="section-title">{t("academics.title")}</h3>
             <div className="content-grid">
               <div className="content-card">
-                <div className="card-label">My University</div>
+                <div className="card-label">{t("academics.university.label")}</div>
                 <div className="card-content">
                   <div className="text-block">
-                    Dalhousie University provides me with a strong foundation in computer science,  
-                    from algorithms to modern Machine Learning.
+                    {t("academics.university.description")}
                   </div>
                 </div>
               </div>
@@ -75,46 +65,86 @@ const Home = () => {
           </div>
         </div>
 
-        {/* Interests Section */}
-        <div className="content-section" id="section2">
-          <h3 className="section-title">My Interests</h3>
-          <div className="content-list">
-            <div className="content-item">
-              <h4 className="item-title">Technology</h4>
-              <p className="item-description">
-                I enjoy exploring software development, and taking on new projects that further my skills of the trade.
-              </p>
-            </div>
 
-            <div className="content-item">
-              <h4 className="item-title">Travelling</h4>
-              <p className="item-description">
-                Prague is my fav city :&#x29;  
-              </p>
-              <div className="image-placeholder">
-                <img id='prague' src={prague} alt="Prague Brandon" className="prague-image" />
+          {/* Interests Section */}
+          <div className="fade-section content-section" id="section2">
+            <h3 className="section-title">{t("interests.title")}</h3>
+
+            <div className="content-list">
+              <div className="content-item">
+                <h4 className="item-title">{t("interests.technology.label")}</h4>
+                <p className="item-description">{t("interests.technology.description")}</p>
+              </div>
+
+              <div className="content-item">
+                <h4 className="item-title">{t("interests.travelling.label")}</h4>
+                <p className="item-description">{t("interests.travelling.description")}</p>
+                <div className="image-placeholder">
+                  <img id="prague" src={prague} alt="Prague Brandon" className="prague-image" />
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Closing Section */}
-        <div className="content-section" id="section3">
-          <h3 className="section-title">Looking Ahead</h3>
-          <div className="content-item">
-            <p className="item-description">
-              My goal is to build impactful software development while contributing to a safer digital world.
-            </p>
+          {/* Tech Stack Section */}
+          <div className="fade-section content-section" id="section3">
+            <h3 className="section-title">{t("techStack.title")}</h3>
+            <div className="content-grid">
+              <div className="content-card">
+                <div className="card-label">Languages</div>
+                <div className="card-content">
+                  <div className="text-block">{t("techStack.languages")}</div>
+                </div>
+              </div>
+
+              <div className="content-card">
+                <div className="card-label">Frontend</div>
+                <div className="card-content">
+                  <div className="text-block">{t("techStack.frontend")}</div>
+                </div>
+              </div>
+
+              <div className="content-card">
+                <div className="card-label">Backend</div>
+                <div className="card-content">
+                  <div className="text-block">{t("techStack.backend")}</div>
+                </div>
+              </div>
+
+              <div className="content-card">
+                <div className="card-label">Cloud & Systems</div>
+                <div className="card-content">
+                  <div className="text-block">{t("techStack.cloud")}</div>
+                </div>
+              </div>
+
+              <div className="content-card">
+                <div className="card-label">Tools & Workflow</div>
+                <div className="card-content">
+                  <div className="text-block">{t("techStack.tools")}</div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+
+          {/* Closing Section */}
+          <div className="fade-section content-section" id="section4">
+            <h3 className="section-title">{t("closing.title")}</h3>
+            <div className="content-item">
+              <p className="item-description">{t("closing.description")}</p>
+            </div>
+          </div>
+
           <footer className="footer">
             <p>© 2025 Brandon Kuciapski. huzarzy<span className="bold">com</span></p>
           </footer>
+
+        </div>
       </div>
-    </div>
     </>
   );
 };
 
 export default Home;
+
 

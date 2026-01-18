@@ -18,11 +18,25 @@
   font-style: normal;
 }
 
+
+:root {
+  --home-title: #2b456a;
+  --home-main-bg: #ffffff;
+  --home-border: #e5e7eb;
+
+}
+
+[data-theme="dark"] {
+  --home-title: #eddd9f;
+  --home-main-bg: #1a1a1a;
+  --home-border: #333333;
+}
+
 /* ========================= LAYOUT ========================= */
 .main-content {
   grid-area: main;
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: var(--home-main-bg);
+  border: 1px solid var(--home-border);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   border-radius: 8px 8px 0 0;
   height: calc(100vh - 136px);
@@ -37,6 +51,7 @@
   padding: clamp(16px, 4vw, 32px);
   height: 100%;
   font-family: 'ITC Avant Garde Gothic', sans-serif;
+  background: var(--home-main-bg);
 }
 
 .welcome-section {
@@ -45,7 +60,7 @@
 
 .page-title {
   font-size: clamp(1.5rem, 3vw, 1.875rem);
-  color: #2b456a;
+  color: var(--home-title);
   margin-bottom: 16px;
   letter-spacing: 0.05em;
   font-family: 'Myriad Pro Regular', sans-serif;
@@ -61,6 +76,7 @@
   display: flex;
   flex-direction: column;
   gap: 32px;
+  background-color: var(--home-main-bg);
 }
 
 .content-section {
@@ -266,6 +282,7 @@
   justify-content: center;
   margin: 0 -16px;
 }
+
 
 @media (min-width: 768px) {
   .footer {

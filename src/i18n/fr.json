@@ -6,5 +6,71 @@
     "projects": "projets",
     "formula1": "formule 1",
     "contact": "contact"
-  }
+  },
+
+    "navbar": {
+      "welcome": "Accueil",
+      "about": "À propos",
+      "interests": "Intérêts",
+      "stack": "Stack Tech"
+    },
+    "welcome": {
+      "title": "Bienvenue",
+      "subtitle": "Salut, je suis Brandon — un étudiant polono-canadien passionné par la technologie, les voyages et l'apprentissage.\nJ'aime créer des technologies à la fois physiques et numériques."
+    },
+    "about": {
+      "title": "À propos de moi",
+      "description": "Je suis étudiant en deuxième année de Baccalauréat en Informatique Appliquée (BCS) à l'Université Dalhousie à Halifax, Nouvelle-Écosse.\n\nMes principaux centres d'intérêt sont le développement web/logiciel et la cybercriminalité, en particulier la manière dont les systèmes modernes évoluent, échouent et sont sécurisés.\nJ'aime travailler sur des projets qui m'obligent à penser au-delà du cursus et à prendre en compte les contraintes du monde réel."
+    },
+    "academics": {
+      "title": "Vie académique",
+      "university": {
+        "label": "Mon université",
+        "description": "L'Université Dalhousie me fournit une solide base en informatique, allant des algorithmes et structures de données aux sujets modernes comme le machine learning.\n\nEn dehors des cours, je me concentre sur l'application de ces concepts à travers des projets indépendants et l'expérimentation avec des systèmes et outils réels."
+      }
+    },
+    "interests": {
+      "title": "Mes intérêts",
+      "technology": {
+        "label": "Technologie",
+        "description": "J'aime explorer le développement logiciel par le biais de projets pratiques, apprendre de nouveaux outils au fur et à mesure et améliorer ma façon de résoudre les problèmes. Je m'intéresse particulièrement aux systèmes qui fonctionnent de manière continue et à grande échelle."
+      },
+      "travelling": {
+        "label": "Voyages",
+        "description": "Voyager me donne une perspective en dehors du code. Prague est ma ville préférée — le mélange d'histoire, d'architecture et de vie quotidienne vous fait sentir comme dans un conte de fées."
+      }
+    },
+    "techStack": {
+      "title": "Mon Stack Tech",
+      "languages": "Java, Python, JavaScript, C",
+      "frontend": "React, HTML, CSS — axé sur les mises en page responsives et l'UI propre",
+      "backend": "Node.js, REST APIs, applications de bureau JavaFX",
+      "cloud": "Serveurs Linux, Oracle Cloud Infrastructure (VMs), déploiement et surveillance",
+      "tools": "Git/GitHub, VS Code, IntelliJ, ligne de commande, développement itératif"
+    },
+    "closing": {
+      "title": "Perspectives",
+      "description": "À l'avenir, je souhaite continuer à créer des logiciels significatifs, acquérir de l'expérience dans des environnements professionnels et approfondir ma compréhension de la manière dont la technologie peut être utilisée de manière responsable.\n\nJe suis toujours ouvert à apprendre de nouvelles personnes, de nouveaux systèmes et de nouveaux défis."
+    },
+
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Je serais ravi de vous connecter ! Que ce soit pour parler de technologie, de voyage ou de collaborations potentielles, n’hésitez pas à me contacter.",
+      "socials": {
+        "title": "Réseaux sociaux",
+        "description1": "Mes profils sociaux sont liés dans la barre de navigation à gauche ←. Suivez-moi ou envoyez-moi un message là-bas — je suis actif sur des plateformes comme GitHub, LinkedIn et Twitter, et j’aime partager des idées et des projets.",
+        "description2": "Que vous soyez curieux de mon travail, de collaborations ou que vous vouliez juste dire bonjour, n’hésitez pas à me contacter ! La flèche vous guide directement vers mes réseaux sociaux."
+      },
+      "email": {
+        "title": "E-Mail",
+        "description1": "Vous pouvez également me contacter par e-mail à bkuciapski1@gmail.com (personnel) ou bkuciapski@dal.ca (université).",
+        "description2": "Je consulte régulièrement mes e-mails, donc n’hésitez pas à envoyer un message si vous avez des questions, des idées de projets ou simplement pour discuter. Je répondrai dès que possible !"
+      },
+      "connect": {
+        "title": "Restons en contact",
+        "description1": "Le networking et la collaboration sont parmi mes aspects préférés de la tech et de l’apprentissage. Que ce soit pour discuter d’un défi de programmation, je suis toujours heureux de discuter.",
+        "description2": "Si vous le souhaitez, vous pouvez également m’envoyer un message sur les réseaux sociaux, ou simplement mettre cette page en favori et me contacter à tout moment. La barre de navigation à gauche est votre passerelle pour rester en contact !"
+      },
+      "footer": "© 2025 Brandon Kuciapski. huzarzycom"
+    }
 }

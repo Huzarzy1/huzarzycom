@@ -6,5 +6,71 @@
     "projects": "projects",
     "formula1": "formula 1",
     "contact": "contact"
-  }
+  },
+
+    "navbar": {
+      "welcome": "Welcome",
+      "about": "About",
+      "interests": "Interests",
+      "stack": "Stack"
+    },
+    "welcome": {
+      "title": "Welcome",
+      "subtitle": "Hi, I’m Brandon — a Polish/Canadian student passionate about technology, travel, and learning.\nI enjoy building both physical and digital technology."
+    },
+    "about": {
+      "title": "About Me",
+      "description": "I am a second-year Bachelor of Applied Computer Science (BCS) student at Dalhousie University in Halifax, Nova Scotia.\n\nMy main interests lie in web/software development and cybercrime, particularly how modern systems scale, fail, and are secured.\nI enjoy working on projects that force me to think beyond coursework and into real-world constraints."
+    },
+    "academics": {
+      "title": "Academics",
+      "university": {
+        "label": "My University",
+        "description": "Dalhousie University provides me with a strong foundation in computer science, ranging from algorithms and data structures to modern topics like machine learning.\n\nOutside of lectures, I focus on applying these concepts through independent projects and experimenting with real systems and tools."
+      }
+    },
+    "interests": {
+      "title": "My Interests",
+      "technology": {
+        "label": "Technology",
+        "description": "I enjoy exploring software development through hands-on projects, learning new tools as I go, and refining how I approach problem-solving. I’m especially interested in systems that operate continuously and at scale."
+      },
+      "travelling": {
+        "label": "Travelling",
+        "description": "Traveling gives me perspective outside of code. Prague is my favorite city — the mix of history, architecture, and everyday life makes you feel like you're in a fairy tale."
+      }
+    },
+    "techStack": {
+      "title": "My Tech Stack",
+      "languages": "Java, Python, JavaScript, C",
+      "frontend": "React, HTML, CSS — focused on responsive layouts and clean UI",
+      "backend": "Node.js, REST APIs, JavaFX desktop applications",
+      "cloud": "Linux-based servers, Oracle Cloud Infrastructure (VMs), deployment & monitoring",
+      "tools": "Git/GitHub, VS Code, IntelliJ, command line, iterative development"
+    },
+    "closing": {
+      "title": "Looking Ahead",
+      "description": "Looking forward, I want to continue building meaningful software, gain experience in professional environments, and deepen my understanding of how technology can be used responsibly.\n\nI’m always open to learning from new people, new systems, and new challenges."
+    },
+
+    "contact": {
+      "title": "Contact",
+      "subtitle": "I’d love to connect! Whether it’s to chat about tech, travel, or potential collaborations, feel free to reach out.",
+      "socials": {
+        "title": "Socials",
+        "description1": "My social profiles are linked in the navbar to the left ←. Follow or message me there — I’m active on platforms like GitHub, LinkedIn, and Twitter, and I love sharing ideas and projects.",
+        "description2": "Whether you’re curious about my work, collaborations, or just want to say hi, feel free to reach out! The arrow points you straight to my socials."
+      },
+      "email": {
+        "title": "E-Mail",
+        "description1": "You can also reach out to me via email at bkuciapski1@gmail.com (personal) or bkuciapski@dal.ca (school).",
+        "description2": "I check my email regularly, so don’t hesitate to send a message if you have questions, project ideas, or just want to connect. I promise to get back to you as soon as possible!"
+      },
+      "connect": {
+        "title": "Let's Connect",
+        "description1": "Networking and collaboration are some of my favorite parts of tech and learning. Whether it’s discussing a programming challenge, I’m always happy to chat.",
+        "description2": "If you’d like, you can also drop me a message on social media, or just bookmark this page and reach out anytime. The left-hand navbar is your gateway to staying in touch!"
+      },
+      "footer": "© 2025 Brandon Kuciapski. huzarzycom"
+    }
 }
