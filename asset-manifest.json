@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.9ea5f991.css",
-    "main.js": "/static/js/main.ac68fac8.js",
+    "main.css": "/static/css/main.4eabcbd1.css",
+    "main.js": "/static/js/main.9fd31ad8.js",
     "static/js/488.0c108be1.chunk.js": "/static/js/488.0c108be1.chunk.js",
     "static/media/Screenshot 2025-09-30 174353.png": "/static/media/Screenshot 2025-09-30 174353.d9c296b246d600f99149.png",
     "static/media/en.png": "/static/media/en.e9e47aeffbf5d8770293.png",
@@ -19,6 +19,7 @@
     "static/media/green-tire.webp": "/static/media/green-tire.877aa6a4925fa6bca6e0.webp",
     "static/media/red-tire.webp": "/static/media/red-tire.625ae9d0ae695b707666.webp",
     "static/media/com.apple.MobileAddressBook-large.png": "/static/media/com.apple.MobileAddressBook-large.0f756b1a226eb84bb863.png",
+    "static/media/bk-bg-dark.png": "/static/media/bk-bg-dark.29134fa190aba6816990.png",
     "static/media/MYRIADPRO-REGULAR.OTF": "/static/media/MYRIADPRO-REGULAR.6c518fcde55bd3397d56.OTF",
     "static/media/fr.webp": "/static/media/fr.7eaf35255310455b3742.webp",
     "static/media/ITCAvantGardeStd-Bk.ttf": "/static/media/ITCAvantGardeStd-Bk.340c5ba233c574d49756.ttf",
@@ -30,12 +31,12 @@
     "static/media/fb.png": "/static/media/fb.ce691ca7e7ca093c0a38.png",
     "static/media/linkedin.webp": "/static/media/linkedin.bbb2414bc205a327d09b.webp",
     "index.html": "/index.html",
-    "main.9ea5f991.css.map": "/static/css/main.9ea5f991.css.map",
-    "main.ac68fac8.js.map": "/static/js/main.ac68fac8.js.map",
+    "main.4eabcbd1.css.map": "/static/css/main.4eabcbd1.css.map",
+    "main.9fd31ad8.js.map": "/static/js/main.9fd31ad8.js.map",
     "488.0c108be1.chunk.js.map": "/static/js/488.0c108be1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9ea5f991.css",
-    "static/js/main.ac68fac8.js"
+    "static/css/main.4eabcbd1.css",
+    "static/js/main.9fd31ad8.js"
   ]
 }
