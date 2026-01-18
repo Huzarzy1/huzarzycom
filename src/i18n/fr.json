@@ -74,5 +74,41 @@
         "description2": "Si vous le souhaitez, vous pouvez également m’envoyer un message sur les réseaux sociaux, ou simplement mettre cette page en favori et me contacter à tout moment. La barre de navigation à gauche est votre passerelle pour rester en contact !"
       },
       "footer": "© 2026 Brandon Kuciapski. huzarzycom"
+    },
+
+    "projects": {
+    "featuredTitle": "Travaux en vedette",
+    "otherTitle": "Autres projets",
+
+    "huzarzy": {
+      "title": "huzarzy.com — Site personnel",
+      "description": "Conception et développement d’un site web personnel responsive pour présenter mes projets, mon expérience et mes intérêts, avec des composants React réutilisables, des animations basées sur le défilement et un thème clair/sombre. Accent mis sur la maintenabilité, la performance et une structure UI propre.",
+      "tech": "Technos : React, API, JavaScript, CSS, Design responsive"
+    },
+
+    "atmocan": {
+      "title": "AtmoCan — Application météo JavaFX",
+      "description": "Développement d’une application de bureau JavaFX affichant les prévisions météorologiques horaires et quotidiennes au Canada à l’aide d’API externes. Accent mis sur la mise en page UI, le traitement des données et les mises à jour asynchrones.",
+      "tech": "Technos : Java, Maven, JavaFX, API REST, JSON"
+    },
+
+    "f1": {
+      "title": "Classement Formula 1 en direct",
+      "description": "Développement d’une application web affichant les classements et données de course de Formula 1 en temps réel via des API tierces. Interface réactive, mises à jour dynamiques et hébergement sur une VM Oracle Cloud, intégrée à huzarzy.com."
+    },
+
+    "filechain": {
+      "title": "FileChain — Système personnel de partage de fichiers",
+      "description": "Création d’un système léger de partage de fichiers permettant des transferts sécurisés entre mon PC et mon ordinateur portable. Développé en Python avec Tkinter, hébergé sur un Raspberry Pi."
+    },
+
+    "sticknotez": {
+      "title": "StickNotez — Utilitaire Windows en arrière-plan",
+      "description": "Développement d’une application de notes adhésives en C# WinForms fonctionnant en arrière-plan sous Windows, avec stockage persistant et faible consommation de ressources."
+    },
+    "closing": {
+      "title": "Ma façon de concevoir",
+      "description": "Je privilégie la clarté, la maintenabilité et la compréhension du fonctionnement interne des systèmes. Je m’intéresse particulièrement aux projets confrontés à des contraintes réelles telles que le réseau, la sécurité, les flux de données et l’expérience utilisateur."
     }
+  }
 }

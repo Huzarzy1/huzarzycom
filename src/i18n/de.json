@@ -74,5 +74,41 @@
         "description2": "Wenn Sie möchten, können Sie mir auch eine Nachricht über Social Media senden oder diese Seite einfach bookmarken und jederzeit Kontakt aufnehmen. Die linke Navbar ist Ihr Zugang, um in Verbindung zu bleiben!"
       },
       "footer": "© 2026 Brandon Kuciapski. huzarzycom"
+    },
+
+    "projects": {
+    "featuredTitle": "Ausgewählte Projekte",
+    "otherTitle": "Weitere Projekte",
+
+    "huzarzy": {
+      "title": "huzarzy.com — Persönliche Website",
+      "description": "Entwicklung einer responsiven persönlichen Website zur Präsentation von Projekten, Erfahrungen und Interessen mit wiederverwendbaren React-Komponenten, scrollbasierten Animationen und Light/Dark-Theme-Unterstützung. Fokus auf saubere UI-Struktur, Wartbarkeit und Performance.",
+      "tech": "Technologien: React, API, JavaScript, CSS, Responsive Design"
+    },
+
+    "atmocan": {
+      "title": "AtmoCan — JavaFX Wetteranwendung",
+      "description": "Entwicklung einer JavaFX-Desktopanwendung zur Anzeige stündlicher und täglicher Wettervorhersagen für Kanada unter Nutzung externer Wetter-APIs. Fokus auf UI-Design, Datenverarbeitung und asynchrone Aktualisierungen.",
+      "tech": "Technologien: Java, Maven, JavaFX, REST APIs, JSON"
+    },
+
+    "f1": {
+      "title": "Formula 1 Live-Rangliste",
+      "description": "Entwicklung einer Webanwendung zur Anzeige von Live-Formel-1-Renn- und Tabellenständen über Drittanbieter-APIs. Dynamische Aktualisierungen, strukturierte Zustandsverwaltung und Hosting auf einer Oracle Cloud VM."
+    },
+
+    "filechain": {
+      "title": "FileChain — Persönliches Cloud-Dateisystem",
+      "description": "Entwicklung eines schlanken Cloud-Dateifreigabesystems für den sicheren Dateitransfer zwischen PC und Laptop. Implementiert mit Python und Tkinter, gehostet auf einem Raspberry Pi."
+    },
+
+    "sticknotez": {
+      "title": "StickNotez — Windows-Hintergrundanwendung",
+      "description": "Entwicklung einer C# WinForms-Notizanwendung, die im Hintergrund unter Windows läuft, mit persistentem Speicher und minimaler Ressourcennutzung."
+    },
+    "closing": {
+      "title": "Meine Arbeitsweise",
+      "description": "Ich lege Wert auf Klarheit, Wartbarkeit und ein tiefes Verständnis dafür, wie Systeme intern funktionieren. Besonders interessieren mich Projekte mit realen Einschränkungen wie Netzwerke, Sicherheit, Datenflüsse und Benutzererfahrung."
     }
+  }
 }

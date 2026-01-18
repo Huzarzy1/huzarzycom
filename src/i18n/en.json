@@ -74,5 +74,41 @@
         "description2": "If you’d like, you can also drop me a message on social media, or just bookmark this page and reach out anytime. The left-hand navbar is your gateway to staying in touch!"
       },
       "footer": "© 2026 Brandon Kuciapski. huzarzycom"
+    },
+
+    "projects": {
+    "featuredTitle": "Featured Work",
+    "otherTitle": "Other Projects",
+
+    "huzarzy": {
+      "title": "huzarzy.com — Personal Website",
+      "description": "Designed and developed a responsive personal website to showcase projects, experience, and interests, featuring reusable React components, scroll-based animations, and theme-aware light/dark styling. Built with an emphasis on clean UI structure, maintainability, and performance.",
+      "tech": "Tech: React, API, JavaScript, CSS, Responsive Design"
+    },
+
+    "atmocan": {
+      "title": "AtmoCan — JavaFX Weather Application",
+      "description": "Built a JavaFX desktop application that displays Canadian hourly and daily weather forecasts using external weather APIs. Focused on clean UI layout, data parsing, and asynchronous updates to deliver real-time forecast information.",
+      "tech": "Tech: Java, Maven, JavaFX, REST APIs, JSON"
+    },
+
+    "f1": {
+      "title": "Formula 1 Live Leaderboard",
+      "description": "Developed a web application that displays live Formula 1 standings and race data by integrating third-party APIs. Implemented dynamic updates, structured state management, and a responsive interface optimized for real-time data consumption. Hosted on an Oracle Cloud VM and displayed on huzarzy.com."
+    },
+
+    "filechain": {
+      "title": "FileChain — Personal Cloud File Sharing System",
+      "description": "Created a lightweight personal cloud file-sharing system enabling secure file transfer between my PC and laptop. Built with Python and Tkinter, hosted on a Raspberry Pi, and designed to explore networking, file I/O, and self-hosted infrastructure concepts."
+    },
+
+    "sticknotez": {
+      "title": "StickNotez — Windows Background Utility",
+      "description": "Developed a C# WinForms sticky notes application that runs as a background process on Windows. Designed for low resource usage, persistent note storage, and seamless desktop integration without interrupting the user workflow."
+    },
+    "closing": {
+      "title": "How I Build",
+      "description": "I prioritize clarity, maintainability, and understanding how systems work under the hood. I am most interested in projects that expose real-world constraints—networking, security, data flow, and user experience."
     }
+  }
 }

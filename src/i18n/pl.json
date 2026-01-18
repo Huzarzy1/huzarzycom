@@ -74,5 +74,41 @@
         "description2": "Jeśli chcesz, możesz także wysłać mi wiadomość w mediach społecznościowych lub po prostu dodać tę stronę do zakładek i skontaktować się w dowolnym momencie. Lewy pasek nawigacyjny to Twoja brama do pozostania w kontakcie!"
       },
       "footer": "© 2026 Brandon Kuciapski. huzarzycom"
+    },
+
+    "projects": {
+    "featuredTitle": "Wybrane projekty",
+    "otherTitle": "Pozostałe projekty",
+
+    "huzarzy": {
+      "title": "huzarzy.com — Strona osobista",
+      "description": "Zaprojektowałem i stworzyłem responsywną stronę internetową prezentującą projekty, doświadczenie i zainteresowania, wykorzystując komponenty React, animacje oparte na przewijaniu oraz tryb jasny i ciemny. Nacisk na czytelną strukturę, wydajność i łatwą utrzymalność.",
+      "tech": "Technologie: React, API, JavaScript, CSS, Responsive Design"
+    },
+
+    "atmocan": {
+      "title": "AtmoCan — Aplikacja pogodowa JavaFX",
+      "description": "Stworzyłem aplikację desktopową JavaFX wyświetlającą godzinowe i dzienne prognozy pogody dla Kanady przy użyciu zewnętrznych API. Skupienie na czytelnym interfejsie, przetwarzaniu danych i aktualizacjach asynchronicznych.",
+      "tech": "Technologie: Java, Maven, JavaFX, REST API, JSON"
+    },
+
+    "f1": {
+      "title": "Tabela wyników Formula 1 na żywo",
+      "description": "Aplikacja webowa prezentująca na żywo klasyfikację i dane wyścigowe Formuły 1 poprzez integrację z zewnętrznymi API. Dynamiczne aktualizacje, responsywny interfejs oraz hosting na Oracle Cloud VM."
+    },
+
+    "filechain": {
+      "title": "FileChain — Prywatny system udostępniania plików",
+      "description": "Lekki system do bezpiecznego przesyłania plików pomiędzy komputerami, zbudowany w Pythonie z użyciem Tkintera i hostowany na Raspberry Pi."
+    },
+
+    "sticknotez": {
+      "title": "StickNotez — Narzędzie działające w tle systemu Windows",
+      "description": "Aplikacja typu sticky notes napisana w C# WinForms, działająca w tle systemu Windows, z trwałym zapisem notatek i niskim zużyciem zasobów."
+    },
+    "closing": {
+      "title": "Jak tworzę",
+      "description": "Stawiam na przejrzystość, łatwość utrzymania oraz zrozumienie działania systemów „od środka”. Najbardziej interesują mnie projekty, które uwzględniają realne ograniczenia — sieci, bezpieczeństwo, przepływ danych i doświadczenie użytkownika."
     }
+  }
 }

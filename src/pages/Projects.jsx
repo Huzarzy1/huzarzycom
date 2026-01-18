@@ -141,31 +141,28 @@ function Projects() {
 
                 {/* Featured Projects */}
                 <div className="fade-section content-section" id="featured-projects">
-                <h3 className="section-title">Featured Work</h3>
+                <h3 className="section-title">{t("projects.featuredTitle")}</h3>
 
                 <div className="content-grid" id="featured">
                     {/* Project 1 */}
                     <div className="content-card">
-                    <h4 className="item-title">Decentralized Blockchain Node</h4>
+                    <h4 className="item-title">{t("projects.huzarzy.title")}</h4>
                     <p className="item-description">
-                        Built a peer-to-peer blockchain node with transaction broadcasting, UTXO management,
-                        mining, and consensus logic. Later extended the project with a Java Swing GUI to
-                        visualize node state and interact with the network.
+                        {t("projects.huzarzy.description")}
                     </p>
                     <p className="item-description">
-                        <strong>Tech:</strong> Java, Networking (Sockets), Cryptography, Swing
+                        {t("projects.huzarzy.tech")}
                     </p>
                     </div>
 
                     {/* Project 2 */}
                     <div className="content-card">
-                    <h4 className="item-title">Personal Portfolio Website</h4>
+                    <h4 className="item-title">{t("projects.atmocan.title")}</h4>
                     <p className="item-description">
-                        Designed and developed a responsive portfolio using React with scroll-based animations,
-                        reusable components, and theme-aware (light/dark) styling.
+                        {t("projects.atmocan.description")}
                     </p>
                     <p className="item-description">
-                        <strong>Tech:</strong> React, JavaScript, CSS, Responsive Design
+                        {t("projects.atmocan.tech")}
                     </p>
                     </div>
                 </div>
@@ -173,30 +170,27 @@ function Projects() {
 
                 {/* Additional Projects */}
                 <div className="fade-section content-section" id="other-projects">
-                <h3 className="section-title">Other Projects</h3>
+                <h3 className="section-title">{t("projects.otherTitle")}</h3>
 
                 <div className="content-list">
                     <div className="content-item">
-                    <h4 className="item-title">Formula 1 Live Standings App</h4>
+                    <h4 className="item-title">{t("projects.f1.title")}</h4>
                     <p className="item-description">
-                        Built a React-based web app that displays live Formula 1 standings using external APIs,
-                        with protected routes behind an authentication system.
+                        {t("projects.f1.description")}
                     </p>
                     </div>
 
                     <div className="content-item">
-                    <h4 className="item-title">Brightspace Assignment Scraper</h4>
+                    <h4 className="item-title">{t("projects.filechain.title")}</h4>
                     <p className="item-description">
-                        Designed a concept for a Raspberry Pi–hosted service that aggregates course deadlines
-                        from Brightspace and outputs them into a continuously updating local dashboard.
+                        {t("projects.filechain.description")}
                     </p>
                     </div>
 
                     <div className="content-item">
-                    <h4 className="item-title">DualShock 3 Driver Exploration</h4>
+                    <h4 className="item-title">{t("projects.sticknotez.title")}</h4>
                     <p className="item-description">
-                        Researched and prototyped components of a custom Windows driver for the DualShock 3
-                        controller to better understand USB, HID, and driver-level interactions.
+                        {t("projects.sticknotez.description")}
                     </p>
                     </div>
                 </div>
@@ -204,16 +198,13 @@ function Projects() {
 
                 {/* Philosophy / Closing */}
                 <div className="fade-section content-section" id="projects-closing">
-                <h3 className="section-title">How I Build</h3>
+                <h3 className="section-title">{t("projects.closing.title")}</h3>
                 <div className="content-item">
                     <p className="item-description">
-                    I prioritize clarity, maintainability, and understanding how systems work under the hood.
-                    I’m most interested in projects that expose real-world constraints—networking, security,
-                    data flow, and user experience.
+                    {t("projects.closing.description")}
                     </p>
                 </div>
                 </div>
-
         </div>
         </div>
       </main>
