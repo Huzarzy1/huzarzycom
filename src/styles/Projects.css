@@ -1,9 +1,15 @@
 .conteudo__geral {
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
+
+.container {
+  width: 100%;
+  max-width: 100%;
+}
+
 
 
 img {
@@ -15,9 +21,11 @@ img {
 }
 
 .carousel-container {
+  padding-top: 75px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .container-carrossel {
@@ -64,6 +72,7 @@ img {
   transform: rotatey(var(--rotatey)) translatez(var(--tz));
   background: linear-gradient(-229deg, #fbd52d, #ef3a7b);
   background-image: url(../assets/projects/snapshot.png);
+  background-position: center;
   background-size: cover;
 }
 
@@ -71,7 +80,8 @@ img {
   --rotatey: 0;
   transform: rotatey(var(--rotatey)) translatez(var(--tz));
   background: linear-gradient(-229deg, #ff70af, #5fa8f5);
-  background-image: url(../assets/projects/filechain.png);
+  background-image: url(../assets/projects/f1table.png);
+  background-position: center;
   background-size: cover;
 }
 
@@ -80,7 +90,26 @@ img {
   transform: rotatey(var(--rotatey)) translatez(var(--tz));
   background: linear-gradient(-229deg, #0cebeb, #29ffc6);
   background-image: url(../assets/projects/stiknotez.png);
-  background-size: contain;
+  background-position: center;
+  background-size: cover;
+}
+
+.carrossel-item:nth-child(4) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #0cebeb, #29ffc6);
+  background-image: url(../assets/projects/stiknotez.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.carrossel-item:nth-child(5) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #0cebeb, #29ffc6);
+  background-image: url(../assets/projects/filechain.png);
+  background-position: center;
+  background-size: cover;
 }
 
 

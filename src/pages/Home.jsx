@@ -60,7 +60,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="image-placeholder">
+          <div className="home-image-placeholder">
             <img id="fcs-logo" src={fcsLogo} alt="Faculty of Computer Science Logo" />
           </div>
         </div>
@@ -79,7 +79,7 @@ const Home = () => {
               <div className="content-item">
                 <h4 className="item-title">{t("interests.travelling.label")}</h4>
                 <p className="item-description">{t("interests.travelling.description")}</p>
-                <div className="image-placeholder">
+                <div className="home-image-placeholder">
                   <img id="prague" src={prague} alt="Prague Brandon" className="prague-image" />
                 </div>
               </div>

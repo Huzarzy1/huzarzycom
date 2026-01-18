@@ -142,13 +142,13 @@
 
 @media (min-width: 768px) {
   #academics {
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: center;
   }
 }
 
 /* ======================= IMAGES ======================= */
-.image-placeholder {
+.home-image-placeholder {
   display: flex;
   justify-content: center;
   align-items: center;

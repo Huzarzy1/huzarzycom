@@ -36,6 +36,7 @@ header {
   justify-content: flex-start;
   padding: 12px 20px;
   font-family: 'ITC Avant Garde Gothic', sans-serif;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
 header {
