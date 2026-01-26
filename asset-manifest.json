@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1c559a4b.css",
-    "main.js": "/static/js/main.8a49e3e7.js",
+    "main.css": "/static/css/main.e9c17a6e.css",
+    "main.js": "/static/js/main.d02d0f68.js",
     "static/js/488.0c108be1.chunk.js": "/static/js/488.0c108be1.chunk.js",
     "static/media/Screenshot 2025-09-30 174353.png": "/static/media/Screenshot 2025-09-30 174353.d9c296b246d600f99149.png",
     "static/media/atmocan.png": "/static/media/atmocan.3753e13515cf88613830.png",
@@ -17,6 +17,7 @@
     "static/media/f1table.png": "/static/media/f1table.78dd5de049d56e58848d.png",
     "static/media/com.apple.mobileslideshow-large.png": "/static/media/com.apple.mobileslideshow-large.f46440f997d4856cf140.png",
     "static/media/filechain.png": "/static/media/filechain.d7a03a84c04b86863e8b.png",
+    "static/media/ChintShot.png": "/static/media/ChintShot.7ddbff425185c90be6ce.png",
     "static/media/arrow.png": "/static/media/arrow.af9ae1b12b49818e3c6a.png",
     "static/media/yellow-tire.webp": "/static/media/yellow-tire.06fb7301e6d6a0974eed.webp",
     "static/media/white-tire.webp": "/static/media/white-tire.9758974bdd92f0b35527.webp",
@@ -36,12 +37,12 @@
     "static/media/fb.png": "/static/media/fb.ce691ca7e7ca093c0a38.png",
     "static/media/linkedin.webp": "/static/media/linkedin.bbb2414bc205a327d09b.webp",
     "index.html": "/index.html",
-    "main.1c559a4b.css.map": "/static/css/main.1c559a4b.css.map",
-    "main.8a49e3e7.js.map": "/static/js/main.8a49e3e7.js.map",
+    "main.e9c17a6e.css.map": "/static/css/main.e9c17a6e.css.map",
+    "main.d02d0f68.js.map": "/static/js/main.d02d0f68.js.map",
     "488.0c108be1.chunk.js.map": "/static/js/488.0c108be1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1c559a4b.css",
-    "static/js/main.8a49e3e7.js"
+    "static/css/main.e9c17a6e.css",
+    "static/js/main.d02d0f68.js"
   ]
 }
