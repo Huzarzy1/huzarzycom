@@ -90,7 +90,7 @@ img {
   --rotatey: 0;
   transform: rotatey(var(--rotatey)) translatez(var(--tz));
   background: linear-gradient(-229deg, #0cebeb, #29ffc6);
-  background-image: url(../assets/projects/stiknotez.png);
+  background-image: url(../assets/projects/atmocan.png);
   background-position: center;
   background-size: cover;
 }
@@ -109,6 +109,15 @@ img {
   transform: rotatey(var(--rotatey)) translatez(var(--tz));
   background: linear-gradient(-229deg, #0cebeb, #29ffc6);
   background-image: url(../assets/projects/filechain.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.carrossel-item:nth-child(6) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #0cebeb, #29ffc6);
+  background-image: url(../assets/projects/ChintShot.png);
   background-position: center;
   background-size: cover;
 }

@@ -97,6 +97,11 @@
       "description": "Developed a web application that displays live Formula 1 standings and race data by integrating third-party APIs. Implemented dynamic updates, structured state management, and a responsive interface optimized for real-time data consumption. Hosted on an Oracle Cloud VM and displayed on huzarzy.com."
     },
 
+    "blockchain": {
+      "title": "CHINTCOIN - Blockchain Client",
+      "description": "Created a GUI blockchain client in JFrame that allows users to mine, send, and receive a custom cryptocurrency called CHINTCOIN. Implemented core blockchain concepts such as proof-of-work mining, transaction validation, and decentralized ledger management to explore distributed systems and cryptographic principles. All developed in Java."
+    },
+
     "filechain": {
       "title": "FileChain — Personal Cloud File Sharing System",
       "description": "Created a lightweight personal cloud file-sharing system enabling secure file transfer between my PC and laptop. Built with Python and Tkinter, hosted on a Raspberry Pi, and designed to explore networking, file I/O, and self-hosted infrastructure concepts."

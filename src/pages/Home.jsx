@@ -1,5 +1,5 @@
 // import Bibleverse from '../components/Bibleverse';
-import '../styles/Home.css';
+import '../styles/theme.css';
 import fcsLogo from '../assets/fcs-logo.png';
 import prague from  '../assets/Screenshot 2025-09-30 174353.png';
 import React from "react";

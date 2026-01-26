@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import "../styles/Formula1.css";
+import "../styles/theme.css";
 
 import red_tire from "../assets/tires/red-tire.webp";
 import yellow_tire from "../assets/tires/yellow-tire.webp";
@@ -11,7 +11,7 @@ import default_tire from "../assets/tires/red-tire.webp";
 
 import fastestLapIcon from "../assets/tires/green-tire.webp"; 
 
-const F1_KEY = "http://192.168.2.18:5000/leaderboard";
+const F1_KEY = "http://127.0.0.1:5000/leaderboard";
 
 const TYRE_IMAGE_FOR = {
   SOFT: red_tire,

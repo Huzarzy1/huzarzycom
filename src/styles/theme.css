@@ -1,0 +1,435 @@
+/* ======================================================
+GLOBAL THEME + LAYOUT (theme.css)
+Purpose:
+
+* Single source of truth for colors, fonts, layout
+* Eliminates duplication across Home / Contact / F1 / Projects
+* Enables clean light/dark theming via [data-theme]
+  ====================================================== */
+
+/* ========================= FONTS ========================= */
+@font-face {
+font-family: 'ITC Avant Garde Gothic';
+src: local('ITC Avant Garde Gothic Bk'),
+local('ITC-Avant-Garde-Gothic-Bk'),
+url('../fonts/ITCAvantGardeStd-Bk.woff2') format('woff2'),
+url('../fonts/ITCAvantGardeStd-Bk.woff') format('woff'),
+url('../fonts/ITCAvantGardeStd-Bk.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'Myriad Pro Regular';
+src: local('Myriad Pro Regular'),
+url('../fonts/MYRIADPRO-REGULAR.OTF') format('opentype');
+font-weight: normal;
+font-style: normal;
+}
+
+/* ========================= THEME VARIABLES ========================= */
+:root {
+/* Backgrounds */
+--bg: #ffffff;
+--surface: #ffffff;
+--surface-muted: #f9fafb;
+
+/* Text */
+--text: #1f2937;
+--text-muted: #6b7280;
+--heading: #2b456a;
+
+/* Borders & accents */
+--border: #e5e7eb;
+--border-muted: #f3f4f6;
+--accent: #4781d7;
+
+/* Shadows */
+--shadow-sm: 0 2px 4px rgba(0,0,0,0.08);
+--shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+
+/* UI chrome */
+--navbar-bg: linear-gradient(
+to bottom,
+#7f7f7f 0%,
+#5c5c5c 50%,
+#444 51%,
+#2c2c2c 100%
+);
+
+--footer-bg: linear-gradient(#f0f0f0, #cfcfcf);
+
+/* Background images */
+--background-image: url('../assets/bk-bg2.png');
+}
+
+[data-theme="dark"] {
+--bg: #1a1a1a;
+--surface: #1a1a1a;
+--surface-muted: #242424;
+
+--text: #f3f4f6;
+--text-muted: #9ca3af;
+--heading: #eddd9f;
+
+--border: #272727;
+--border-muted: #272727;
+--accent: #facc15;
+
+--navbar-bg: linear-gradient(
+to bottom,
+#3a3a3a 0%,
+#2a2a2a 50%,
+#1f1f1f 51%,
+#121212 100%
+);
+
+--footer-bg: linear-gradient(#383838, #161616);
+
+--background-image: url('../assets/bk-bg-dark.png');
+}
+
+/* ========================= GLOBAL RESET ========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: 'ITC Avant Garde Gothic', 'Century Gothic', sans-serif;
+background-color: var(--bg);
+background-image: var(--background-image);
+background-size: cover;
+background-position: center;
+background-attachment: fixed;
+color: var(--text);
+line-height: 1.6;
+transition: background 0.4s ease, color 0.4s ease;
+}
+
+body::-webkit-scrollbar {
+display: none;
+}
+
+/* ========================= CORE LAYOUT ========================= */
+.page-content {
+  padding: clamp(16px, 4vw, 32px);
+  height: 100%;
+  font-family: 'ITC Avant Garde Gothic', sans-serif;
+}
+
+.main-content {
+grid-area: main;
+background: var(--surface);
+border: 1px solid var(--border);
+border-radius: 8px 8px 0 0;
+box-shadow: var(--shadow-md);
+height: calc(100vh - 136px);
+overflow-y: auto;
+}
+
+.main-content::-webkit-scrollbar {
+display: none;
+}
+
+.page-content {
+padding: clamp(16px, 4vw, 32px);
+height: 100%;
+}
+
+.content-sections {
+display: flex;
+flex-direction: column;
+gap: 32px;
+}
+
+.content-section {
+background-color: var(--surface-muted);
+border-radius: 6px;
+padding: clamp(16px, 3vw, 24px);
+}
+
+.content-card, .content-item {
+    background: var(--surface);
+    border: 1px solid var(--border-muted);
+    border-radius: 6px;
+    padding: 16px;
+    transition: border-color .2s ease;
+}
+
+/* .content-grid {
+    grid-gap: 16px;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr;
+    max-width: 500px;
+    width: 100%;
+} */
+
+#featured-projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* ========================= IMAGES ========================= */
+.home-image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#fcs-logo {
+  width: clamp(180px, 40vw, 320px);
+  height: auto;
+  object-fit: contain;
+}
+
+#prague {
+  width: clamp(180px, 40vw, 300px);
+  height: auto;
+  border-radius: 6px;
+  padding-top: 10px;
+}
+
+#arrow {
+  width: 200px;
+  height: 67px;
+  border-radius: 6px;
+  padding-top: 10px;
+  transform: scaley(-1);
+}
+/* ========================= Carousel ========================= */
+.conteudo__geral {
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+
+img {
+  display: block;
+  max-width: 100%;
+  height: 100%;
+  object-fit: cover;
+  mask-image: url(../assets/projects/snapshot.png);
+}
+
+.carousel-container {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.container-carrossel {
+  --widthItem: 150px;
+  --heightItem: 100px;
+  width: var(--widthItem);
+  height: var(--heightItem);
+  perspective: 1000px;
+}
+
+.carrossel {
+  --rotatey: 0;
+  font-size: 4rem;
+  position: relative;
+  transform: rotatey(var(--rotatey));
+  transform-style: preserve-3d;
+  user-select: none;
+  cursor: grab;
+}
+
+.carrossel-item {
+  opacity: 0.5;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: opacity 0.5s;
+}
+
+.carrossel-item:hover {
+  opacity: 1;
+}
+
+.carrossel,
+.carrossel-item {
+  width: 100%;
+  height: 100%;
+}
+/* background: linear-gradient(-229deg, #642B73, #C6426E); */
+
+.carrossel-item:nth-child(1) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #fbd52d, #ef3a7b);
+  background-image: url(../assets/projects/snapshot.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.carrossel-item:nth-child(2) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #ff70af, #5fa8f5);
+  background-image: url(../assets/projects/f1table.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.carrossel-item:nth-child(3) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #0cebeb, #29ffc6);
+  background-image: url(../assets/projects/atmocan.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.carrossel-item:nth-child(4) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #0cebeb, #29ffc6);
+  background-image: url(../assets/projects/stiknotez.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.carrossel-item:nth-child(5) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #0cebeb, #29ffc6);
+  background-image: url(../assets/projects/filechain.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.carrossel-item:nth-child(6) {
+  --rotatey: 0;
+  transform: rotatey(var(--rotatey)) translatez(var(--tz));
+  background: linear-gradient(-229deg, #0cebeb, #29ffc6);
+  background-image: url(../assets/projects/ChintShot.png);
+  background-position: center;
+  background-size: cover;
+}
+
+
+@media screen and (min-width: 576px) {
+  .container-carrossel {
+    --widthItem: 250px;
+    --heightItem: 200px;
+  }
+}
+
+/* ========================= TYPOGRAPHY ========================= */
+.page-title {
+font-family: 'Myriad Pro Regular', sans-serif;
+font-weight: bold;
+font-size: clamp(1.5rem, 3vw, 1.875rem);
+letter-spacing: 0.05em;
+color: var(--heading);
+margin-bottom: 16px;
+}
+
+.page-subtitle {
+font-size: clamp(1rem, 2vw, 1.125rem);
+color: var(--text-muted);
+}
+
+/* ========================= NAVBAR ========================= */
+.top-navbar {
+position: sticky;
+top: 0;
+z-index: 1000;
+height: 44px;
+background: var(--navbar-bg);
+border: 1px solid #1a1a1a;
+border-radius: 8px;
+display: flex;
+align-items: center;
+justify-content: center;
+box-shadow:
+inset 0 1px 0 rgba(255, 255, 255, 0.25),
+0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+.top-navbar ul {
+display: flex;
+gap: clamp(16px, 5vw, 50px);
+list-style: none;
+}
+
+.top-navbar li {
+font-family: 'Myriad Pro Regular', sans-serif;
+font-size: 14px;
+font-weight: 500;
+padding: 0 8px;
+line-height: 44px;
+cursor: pointer;
+transition: background 0.2s ease;
+}
+
+.top-navbar li:hover {
+background: rgba(255, 255, 255, 0.15);
+border-radius: 4px;
+}
+
+.top-navbar a {
+color: #bdbdbd;
+text-decoration: none;
+}
+
+.nav-logo {
+font-family: 'ITC Avant Garde Gothic', sans-serif;
+font-size: 18px;
+background-color: #ffffff;
+color: #5e5e5e;
+width: 32px;
+height: 32px;
+border-radius: 4px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+/* ========================= FOOTER ========================= */
+.footer {
+height: 84px;
+background: var(--footer-bg);
+border-top: 1px solid var(--border);
+font-family: 'ITC Avant Garde Gothic', sans-serif;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 -16px;
+}
+
+@media (min-width: 768px) {
+.footer { margin: 0 -24px; }
+}
+
+@media (min-width: 1280px) {
+.footer { margin: 0 -40px; }
+}
+
+#welcome, #section1, #section2, #section3, #academics {
+  scroll-margin-top: 44px;
+  padding-top: 16px;
+}

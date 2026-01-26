@@ -25,7 +25,7 @@
   --nav-title: linear-gradient(#efefef, #cecece, #efefef);
   --nav-title-text: #565656;
   --nav-bg: rgb(244, 244, 244);
-  --border: #dfdfdf;
+  --nav-border: #dfdfdf;
   --nav-text-color: #122260;
   --nav-highlight: #c1c1c1;
 }
@@ -34,7 +34,7 @@
   --nav-title: linear-gradient(#404040, #1d1d1d, #404040);
   --nav-title-text: #a9a9a9;
   --nav-bg: rgb(40, 40, 40);
-  --border: #1d1d1d;
+  --nav-border: #1d1d1d;
   --nav-text-color: #eddd9f;
   --nav-highlight: #f3f4f6;
 }
@@ -46,7 +46,7 @@
 .Navbar {
   grid-area: navbar;
   background: var(--nav-bg);
-  border: 1px solid var(--border);
+  border: 1px solid var(--nav-border);
   border-radius: 10px;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   height: calc(100vh - 470px);
@@ -74,7 +74,7 @@
   font-family: 'Myriad Pro Regular', sans-serif;
   color: #565656;
   padding: 10px 12px;
-  border: 2px solid var(--border);
+  border: 2px solid var(--nav-border);
   border-top: none;
   border-radius: 8px;
   background: var(--nav-title);
@@ -100,7 +100,7 @@
   font-family: 'Myriad Pro Regular', sans-serif;
   border-radius: 8px;
   transition: all 0.2s ease;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--nav-border);
 }
 
 .nav-link:last-child,
@@ -137,13 +137,13 @@
 }
 
 .navbar-section {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--nav-border);
 }
 
 .section-title {
   font-size: 0.875rem;
   font-weight: 500;
-  color: #1f2937;
+  color: var(--heading);
   margin-bottom: 16px;
 }
 
@@ -166,7 +166,7 @@
     border-radius: 0;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--nav-border);
 
     display: flex;
     flex-direction: row;

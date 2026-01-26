@@ -97,6 +97,11 @@
       "description": "Entwicklung einer Webanwendung zur Anzeige von Live-Formel-1-Renn- und Tabellenständen über Drittanbieter-APIs. Dynamische Aktualisierungen, strukturierte Zustandsverwaltung und Hosting auf einer Oracle Cloud VM."
     },
 
+    "blockchain": {
+      "title": "CHINTCOIN - Blockchain-Client",
+      "description": "Erstellte einen GUI-Blockchain-Client in JFrame, der es Benutzern ermöglicht, eine eigene Kryptowährung namens CHINTCOIN zu minen, zu senden und zu empfangen. Implementierte grundlegende Blockchain-Konzepte wie Proof-of-Work-Mining, Transaktionsvalidierung und dezentrale Ledger-Verwaltung zur Erforschung verteilter Systeme und kryptografischer Prinzipien. Alles in Java entwickelt."
+    },
+
     "filechain": {
       "title": "FileChain — Persönliches Cloud-Dateisystem",
       "description": "Entwicklung eines schlanken Cloud-Dateifreigabesystems für den sicheren Dateitransfer zwischen PC und Laptop. Implementiert mit Python und Tkinter, gehostet auf einem Raspberry Pi."

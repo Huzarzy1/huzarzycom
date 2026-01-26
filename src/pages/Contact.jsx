@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/Contact.css';
+import '../styles/theme.css';
 import arrow from '../assets/arrow.png';
 import { useTranslation } from 'react-i18next';
 

@@ -23,6 +23,7 @@
   --home-title: #2b456a;
   --home-main-bg: #ffffff;
   --home-border: #e5e7eb;
+  --content-section-bg: #f9fafb;
 
 }
 
@@ -30,6 +31,7 @@
   --home-title: #eddd9f;
   --home-main-bg: #1a1a1a;
   --home-border: #333333;
+  --content-section-bg: #2c2c2c;
 }
 
 /* ========================= LAYOUT ========================= */
@@ -80,7 +82,7 @@
 }
 
 .content-section {
-  background-color: #f9fafb;
+  background-color: var(--content-section-bg);
   border-radius: 6px;
   padding: clamp(16px, 3vw, 24px);
 }

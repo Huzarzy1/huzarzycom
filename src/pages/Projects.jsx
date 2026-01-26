@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "../styles/Projects.css";
+import "../styles/theme.css";
 import { useTranslation } from "react-i18next";
 
 function Projects() {
@@ -130,7 +130,7 @@ function Projects() {
           <div className="carousel-container">
             <div className="container-carrossel" ref={containerCarrosselRef}>
               <div className="carrossel" ref={carrosselRef}>
-                {Array.from({ length: 5 }).map((_, i) => (
+                {Array.from({ length: 6 }).map((_, i) => (
                   <div className="carrossel-item" key={i} />
                 ))}
               </div>
@@ -177,6 +177,13 @@ function Projects() {
                     <h4 className="item-title">{t("projects.f1.title")}</h4>
                     <p className="item-description">
                         {t("projects.f1.description")}
+                    </p>
+                    </div>
+
+                    <div className="content-item">
+                    <h4 className="item-title">{t("projects.blockchain.title")}</h4>
+                    <p className="item-description">
+                        {t("projects.blockchain.description")}
                     </p>
                     </div>
 

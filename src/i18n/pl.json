@@ -97,6 +97,11 @@
       "description": "Aplikacja webowa prezentująca na żywo klasyfikację i dane wyścigowe Formuły 1 poprzez integrację z zewnętrznymi API. Dynamiczne aktualizacje, responsywny interfejs oraz hosting na Oracle Cloud VM."
     },
 
+    "blockchain": {
+      "title": "CHINTCOIN - Klient Blockchain",
+      "description": "Stworzyłem klienta blockchain GUI w JFrame umożliwiającego użytkownikom wydobywanie, wysyłanie i odbieranie niestandardowej kryptowaluty o nazwie CHINTCOIN. Zaimplementowałem podstawowe koncepcje blockchaina, takie jak wydobywanie Proof-of-Work, walidacja transakcji oraz zarządzanie zdecentralizowanym rejestrem, aby eksplorować systemy rozproszone i zasady kryptografii. Wszystko stworzone w języku Java."
+    },
+
     "filechain": {
       "title": "FileChain — Prywatny system udostępniania plików",
       "description": "Lekki system do bezpiecznego przesyłania plików pomiędzy komputerami, zbudowany w Pythonie z użyciem Tkintera i hostowany na Raspberry Pi."
