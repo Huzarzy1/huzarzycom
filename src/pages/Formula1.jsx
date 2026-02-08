@@ -11,7 +11,8 @@ import default_tire from "../assets/tires/red-tire.webp";
 
 import fastestLapIcon from "../assets/tires/green-tire.webp"; 
 
-const F1_KEY = "http://127.0.0.1:5000/leaderboard";
+const F1_KEY = process.env.REACT_APP_F1_SERVER;
+
 
 const TYRE_IMAGE_FOR = {
   SOFT: red_tire,
@@ -50,7 +51,8 @@ const Formula1 = () => {
     };
 
     load();
-    const interval = setInterval(load, 1000);
+    // Set interval for server refresh
+    const interval = setInterval(load, 10000);
     return () => {
       mounted = false;
       clearInterval(interval);

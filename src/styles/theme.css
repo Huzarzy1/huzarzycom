@@ -433,3 +433,116 @@ margin: 0 -16px;
   scroll-margin-top: 44px;
   padding-top: 16px;
 }
+
+/* ========================= F1 Table ========================= */
+
+/* HEADER */
+.f1-container{ display:flex; flex-direction:column; gap:16px; background: #f0f0f0; border-radius: 8px;}
+.header-row{ display:flex; justify-content:space-between; align-items:center; gap:20px; }
+.event-title{ font-size:26px; margin:0; color:var(--text); padding-left: 10px;}
+.session-title{ font-size:16px; margin:2px 0 0 0; color:var(--muted); font-weight:600; padding-left: 10px;}
+
+/* LAP COUNT small badge */
+.lap-count{ font-size:13px; color:var(--muted); background: rgba(255,255,255,0.03); padding:8px 8px; border-radius:10px; font-size: 16px; font-weight: bold;}
+
+/* LEADERBOARD */
+.leaderboard{ display:flex; flex-direction:column; gap:10px; margin-top:6px; }
+
+/* DRIVER CARD */
+.driver-card{
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+  padding:10px 12px;
+  border-radius:10px;
+  font-family: 'Myriad Pro Regular';
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  transition: transform 160ms ease;
+}
+.driver-card:hover{ transform: translateY(-4px); }
+
+.left{ display:flex; align-items:center; gap:12px; min-width: 0; }
+.position{ width:40px; text-align:center; font-weight:700; font-size:18px; color:var(--accent); }
+.headshot{ width:48px; height:48px; border-radius:50%; object-fit:cover; border: 2px solid rgba(255,255,255,0.04); background:#0b0b0d; }
+
+.name-block{ display:flex; flex-direction:column; min-width:0; }
+.driver-name{ font-weight:700; font-size:15px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:260px; }
+.team-name{ font-weight:600; font-size:13px; opacity:0.95; margin-top:2px; }
+
+/* RIGHT SIDE (lap time + tyre) */
+.right{ display:flex; align-items:center; gap:12px; min-width:120px; justify-content:flex-end; }
+.laptime{ font-size:16px; font-weight:700; color:var(--text); color: #122260; }
+.tire{ width:36px; height:auto; }
+
+
+.driver-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #7F7F7F;
+  background: linear-gradient(0deg, rgba(127, 127, 127, 1) 0%, rgba(232, 232, 232, 1) 100%);
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 8px;
+  border-color: #d3d3d3;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.name-block {
+  display: flex;
+  flex-direction: column;
+}
+
+.driver-name {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: bold;
+}
+
+.fastest-lap-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.delta {
+  color: #e0e0e0;
+  font-size: 0.9rem;
+  margin-right: 8px;
+}
+
+.in-pit {
+  background-color: yellow;
+  /* color: black; */
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
+
+
+
+
+@media (min-width: 768px) {
+  .content-grid {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%;
+  }
+}
+
+@media (max-width:720px){
+  .driver-name{ max-width:140px; font-size:14px; }
+  .position{ width:32px; font-size:16px; }
+  .headshot{ width:40px; height:40px; }
+  .right{ min-width:80px; }
+}
