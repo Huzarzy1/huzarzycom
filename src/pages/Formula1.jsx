@@ -11,7 +11,7 @@ import default_tire from "../assets/tires/red-tire.webp";
 
 import fastestLapIcon from "../assets/tires/green-tire.webp"; 
 
-const F1_KEY = process.env.REACT_APP_F1_SERVER;
+const F1_KEY = "http://127.0.0.1:5000/leaderboard"; 
 
 
 const TYRE_IMAGE_FOR = {
