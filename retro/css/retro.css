@@ -1,0 +1,200 @@
+/* retro/css/retro.css
+   Header structure follows the layout of the sikhchic.com masthead (842px column,
+   64px plate, numbered section row, one row of tabs). All code here is original. */
+
+@font-face {
+  font-family: 'Avant Garde';
+  src: url('../fonts/ITCAvantGardeStd-Bk.woff2') format('woff2'),
+       url('../fonts/ITCAvantGardeStd-Bk.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Avant Garde';
+  src: url('../fonts/AvantGarde-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Myriad Light';
+  src: url('../fonts/MyriadPro-Light.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+:root {
+  --page-bg: #808080;
+  --plate-top: #ffffff;
+  --plate-mid: #efefef;
+  --plate-bot: #c4c4c4;
+  --ink: #1a1a1a;
+  --ink-light: #8a8a8a;
+  --num: #b3b3b3;
+  --num-active: #ffffff;
+  --tab: #f6931f;
+  --tab-hover: #d97a08;
+  --gutter-left: #6b4337;
+  --gutter-right: #b3a38e;
+  --shell: #ffffff;
+}
+
+[data-theme="night"] {
+  --page-bg: #262626;
+  --plate-top: #707070;
+  --plate-mid: #4a4a4a;
+  --plate-bot: #2a2a2a;
+  --ink: #f2f2f2;
+  --ink-light: #a6a6a6;
+  --num: #666666;
+  --gutter-left: #35211a;
+  --gutter-right: #433d35;
+  --shell: #e6e6e6;
+}
+
+html, body { margin: 0; padding: 0; }
+
+body {
+  position: relative;
+  min-height: 100vh;
+  background: var(--page-bg);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: var(--ink);
+}
+
+a { text-decoration: none; outline: 0; }
+ul { list-style: none; margin: 0; padding: 0; }
+
+/* Side panels: a caption on the left, a photo slot on the right.
+   Swap in photos later with background-image on these two. */
+.gutter {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: max(0px, calc(50% - 421px));
+}
+.gutter-left { left: 0; background: var(--gutter-left); }
+.gutter-right { right: 0; background: var(--gutter-right); }
+.gutter .caption {
+  position: absolute;
+  top: 54px;
+  right: 22px;
+  margin: 0;
+  text-align: right;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: .08em;
+  color: #fff;
+}
+
+#page {
+  position: relative;
+  width: 842px;
+  margin: 0 auto;
+  padding: 17px 0 40px;
+}
+
+/* ---------- masthead plate ---------- */
+.masthead {
+  position: relative;
+  height: 64px;
+  border-radius: 12px;
+  background: linear-gradient(to bottom, var(--plate-top) 0, var(--plate-mid) 38%, var(--plate-bot) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), inset 0 -1px 0 rgba(0,0,0,.14);
+}
+.masthead h1 {
+  margin: 0;
+  position: absolute;
+  left: 22px;
+  top: 0;
+  font-family: 'Avant Garde', 'Century Gothic', 'Trebuchet MS', sans-serif;
+  font-size: 42px;
+  line-height: 64px;
+  letter-spacing: -.02em;
+  font-weight: 400;
+}
+.masthead h1 a { color: inherit; }
+.masthead .light { color: var(--ink-light); font-weight: 400; }
+.masthead .bold  { color: var(--ink); font-weight: 700; margin-left: .12em; }
+
+.lang { position: absolute; right: 16px; top: 22px; display: flex; gap: 4px; }
+.lang button {
+  height: 20px;
+  min-width: 26px;
+  padding: 0 5px;
+  border: 1px solid #9c9c9c;
+  border-radius: 3px;
+  background: linear-gradient(#fafafa, #d2d2d2);
+  font: bold 10px Helvetica, Arial, sans-serif;
+  color: #444;
+  cursor: pointer;
+}
+.lang button:hover { background: linear-gradient(#ffffff, #e6e6e6); }
+.lang button[aria-pressed="true"] {
+  background: linear-gradient(#f9b04a, var(--tab));
+  border-color: #b8650a;
+  color: #fff;
+}
+
+/* ---------- numbered section row ---------- */
+.sections ul {
+  display: flex;
+  justify-content: space-between;
+  height: 54px;
+  box-sizing: border-box;
+  padding: 11px 10px 0;
+}
+.sections a {
+  display: flex;
+  flex-direction: column;
+  color: var(--ink);
+}
+.sections .lab {
+  align-self: flex-start;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: 700;
+  text-transform: lowercase;
+}
+.sections .num {
+  align-self: flex-end;
+  margin-top: 1px;
+  font-family: 'Myriad Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 23px;
+  line-height: 24px;
+  color: var(--num);
+}
+.sections a:hover .num { color: #e2e2e2; }
+.sections a[aria-current="page"] .lab,
+.sections a[aria-current="page"] .num { color: var(--num-active); }
+
+/* ---------- tab row ---------- */
+.tabs { display: flex; gap: 1px; margin-top: 2px; }
+.tabs li { flex: 1 1 auto; }
+.tabs a {
+  display: block;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+  background: var(--tab);
+  border-radius: 6px;
+}
+.tabs a:hover { background: var(--tab-hover); }
+
+/* ---------- content stub ---------- */
+.content { display: flex; gap: 10px; margin-top: 12px; align-items: flex-start; }
+.box {
+  box-sizing: border-box;
+  background: var(--shell);
+  border-radius: 8px 8px 0 0;
+  min-height: 320px;
+  padding: 16px 20px;
+  color: #222;
+}
+.box.main { flex: 1 1 auto; }
+.box.side { flex: 0 0 274px; }
+.box h2 { margin: 0 0 10px; font-size: 26px; font-weight: 400; color: #333; }
+.box p { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 20px; white-space: pre-line; }
