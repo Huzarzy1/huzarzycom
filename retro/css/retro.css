@@ -14,10 +14,10 @@
   --ink: #000000;
   --num: #666666;
   --num-active: #ffffff;
-  --tab: #fe9b0d;
-  --tab-hover: #e38400;
-  --gutter-left: #6b4337;
-  --gutter-right: #b3a38e;
+  --tab: #2f6fb3;        /* deep sky blue: complements the sunflower, 5.2:1 with white text */
+  --tab-hover: #245a94;
+  /* Placeholder until the Lower Silesia photo arrives: sky into field. */
+  --gutter-fill: linear-gradient(#5d9bd8 0, #a9d0f0 55%, #c9c24a 72%, #6f9a34 100%);
   --shell: #ffffff;
 }
 
@@ -35,16 +35,17 @@ body {
 a { text-decoration: none; outline: 0; }
 ul { list-style: none; margin: 0; padding: 0; }
 
-/* Side panels: a caption on the left, a photo slot on the right.
-   Swap in photos later with background-image on these two. */
+/* Side panels with the photo caption on the left.
+   When the photo arrives, set --gutter-fill to url('../img/<photo>.jpg') center top / cover no-repeat. */
 .gutter {
   position: absolute;
   top: 0;
   bottom: 0;
   width: max(0px, calc(50% - 427px)); /* leaves 6px of page gray beside the column */
+  background: var(--gutter-fill);
 }
-.gutter-left { left: 0; background: var(--gutter-left); }
-.gutter-right { right: 0; background: var(--gutter-right); }
+.gutter-left { left: 0; }
+.gutter-right { right: 0; }
 .gutter .caption {
   position: absolute;
   top: 54px;
@@ -55,6 +56,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   line-height: 17px;
   letter-spacing: .08em;
   color: #fff;
+  text-shadow: 0 1px 2px rgba(0,0,0,.45); /* stays readable over a bright sky */
 }
 
 #page {
@@ -98,8 +100,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .lang button:hover { background: linear-gradient(#ffffff, #e6e6e6); }
 .lang button[aria-pressed="true"] {
-  background: linear-gradient(#f9b04a, var(--tab));
-  border-color: #b8650a;
+  background: var(--tab);
+  border-color: var(--tab-hover);
   color: #fff;
 }
 
@@ -148,8 +150,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 .sec a[aria-current="page"] .lab,
 .sec a[aria-current="page"] .num { color: var(--num-active); }
 
-/* ---------- orange button row ----------
-   Measured from the screenshot: flat #fe9b0d, 25px tall, square top,
+/* ---------- button row ----------
+   Measured from the sikhchic screenshot (their color was orange #fe9b0d; ours is --tab): 25px tall, square top,
    ~5px rounded bottom corners, 1px page-gray gaps, 13px white text,
    ~9-10px padding each side. Buttons grow from their text width so the
    row ends flush with the plate. */
