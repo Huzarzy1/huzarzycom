@@ -16,8 +16,9 @@
   --num-active: #ffffff;
   --tab: #2f6fb3;        /* deep sky blue: complements the sunflower, 5.2:1 with white text */
   --tab-hover: #245a94;
-  /* Placeholder until the Lower Silesia photo arrives: sky into field. */
-  --gutter-fill: linear-gradient(#5d9bd8 0, #a9d0f0 55%, #c9c24a 72%, #6f9a34 100%);
+  /* Side photo and the colour that continues below it if the page is longer. */
+  --side-photo: url('../img/side-krakow.jpg');
+  --side-under: #454e51;
   --shell: #ffffff;
 }
 
@@ -35,17 +36,23 @@ body {
 a { text-decoration: none; outline: 0; }
 ul { list-style: none; margin: 0; padding: 0; }
 
-/* Side panels with the photo caption on the left.
-   When the photo arrives, set --gutter-fill to url('../img/<photo>.jpg') center top / cover no-repeat. */
+/* Side panels: one photo, as wide as the window, starting at the top of the page.
+   The column covers its middle, so each panel shows one edge of it, and it scrolls
+   with the page. To swap the photo, change --side-photo (and --side-under). */
 .gutter {
   position: absolute;
   top: 0;
   bottom: 0;
   width: max(0px, calc(50% - 427px)); /* leaves 6px of page gray beside the column */
-  background: var(--gutter-fill);
+  --side-ratio: 1.7774; /* photo height / width (1182 / 665) */
+  background-color: var(--side-under);
+  /* top layer fades the photo's last stretch into --side-under, so short photos end softly */
+  background-image: linear-gradient(rgba(69,78,81,0) 82%, var(--side-under) 100%), var(--side-photo);
+  background-repeat: no-repeat;
+  background-size: 100vw calc(100vw * var(--side-ratio)), 100vw auto;
 }
-.gutter-left { left: 0; }
-.gutter-right { right: 0; }
+.gutter-left { left: 0; background-position: left top, left top; }
+.gutter-right { right: 0; background-position: right top, right top; }
 .gutter .caption {
   position: absolute;
   top: 54px;
