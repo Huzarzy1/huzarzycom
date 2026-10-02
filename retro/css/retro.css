@@ -147,8 +147,8 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .sec a:hover .lab,
 .sec a:hover .num,
-.sec a[aria-current="page"] .lab,
-.sec a[aria-current="page"] .num { color: var(--num-active); }
+.sec a[aria-current] .lab,
+.sec a[aria-current] .num { color: var(--num-active); }
 
 /* ---------- button row ----------
    Measured from the sikhchic screenshot (their color was orange #fe9b0d; ours is --tab): 25px tall, square top,
@@ -173,17 +173,133 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 .tabs a:hover { background: var(--tab-hover); }
 
-/* ---------- content stub ---------- */
+/* ---------- content: a 2000s blog ----------
+   One white shell with the posts, a 274px sidebar of boxed widgets,
+   bare underlined hyperlinks, Georgia body copy, 102px framed thumbnails. */
+:root {
+  --link: #1f5a99;
+  --link-visited: #5b4a8a;
+  --link-hover: #c2410c;
+  --rule: #c9c9c9;
+  --meta: #7d7e82;
+}
+
 .content { display: flex; gap: 10px; margin-top: 12px; align-items: flex-start; }
+
 .box {
   box-sizing: border-box;
   background: var(--shell);
   border-radius: 8px 8px 0 0;
-  min-height: 320px;
-  padding: 16px 20px;
   color: #222;
 }
-.box.main { flex: 1 1 auto; }
-.box.side { flex: 0 0 274px; }
-.box h2 { margin: 0 0 10px; font-size: 26px; font-weight: 400; color: #333; }
-.box p { margin: 0; font-family: Georgia, 'Times New Roman', serif; font-size: 16px; line-height: 20px; white-space: pre-line; }
+.box.main { flex: 1 1 auto; min-width: 0; padding: 14px 22px 10px; }
+
+/* Bare hypertext links, the way they were */
+.content a, .foot a { color: var(--link); text-decoration: underline; }
+.content a:visited, .foot a:visited { color: var(--link-visited); }
+.content a:hover, .foot a:hover { color: var(--link-hover); }
+
+.dateline {
+  margin: 0 0 4px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid var(--tab);
+  font: bold 11px Verdana, Tahoma, Arial, sans-serif;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  color: var(--meta);
+}
+
+.post {
+  padding: 14px 0 16px;
+  border-bottom: 1px dashed var(--rule);
+}
+.post:last-child { border-bottom: 0; }
+.post::after { content: ""; display: block; clear: both; }
+
+.post h2 {
+  margin: 0;
+  font: normal 22px/26px Georgia, 'Times New Roman', serif;
+  letter-spacing: -.01em;
+}
+.content .post h2 a { color: var(--link); text-decoration: none; }
+.content .post h2 a:hover { color: var(--link-hover); text-decoration: underline; }
+
+.post .meta {
+  margin: 3px 0 10px;
+  white-space: normal;
+  font: 11px Verdana, Tahoma, Arial, sans-serif;
+  color: var(--meta);
+}
+
+.post h3 {
+  clear: none;
+  margin: 12px 0 4px;
+  font: bold 12px Verdana, Tahoma, Arial, sans-serif;
+  color: #333;
+}
+
+.post p {
+  margin: 0 0 10px;
+  font: 15px/20px Georgia, 'Times New Roman', serif;
+  color: #222;
+  white-space: pre-line;
+}
+
+.thumb {
+  float: left;
+  margin: 2px 12px 6px 0;
+  padding: 2px;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+/* Tech stack: an old-school definition table */
+.specs {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  margin: 0;
+  border-top: 1px solid #e3e3e3;
+  font: 12px/17px Verdana, Tahoma, Arial, sans-serif;
+}
+.specs dt, .specs dd { margin: 0; padding: 5px 6px; border-bottom: 1px solid #e3e3e3; }
+.specs dt { font-weight: bold; color: #333; background: #f3f3f3; }
+
+/* Project listing, like a news list with thumbnails */
+.listing { margin: 0; }
+.listing li {
+  padding: 10px 6px;
+  border-bottom: 1px dashed var(--rule);
+}
+.listing li:last-child { border-bottom: 0; }
+.listing li::after { content: ""; display: block; clear: both; }
+.listing li:hover { background: #eef4fb; }
+.listing h4 { margin: 0 0 3px; font: bold 14px/18px Georgia, 'Times New Roman', serif; color: #222; }
+.listing p { margin: 0 0 4px; font: 12px/17px Verdana, Tahoma, Arial, sans-serif; white-space: normal; }
+.listing p.tech { color: var(--meta); font-size: 11px; }
+
+/* ---------- sidebar widgets ---------- */
+.side { flex: 0 0 274px; }
+.widget {
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid #b9c7d8;
+}
+.widget h2 {
+  margin: 0;
+  padding: 5px 10px;
+  font: bold 12px Verdana, Tahoma, Arial, sans-serif;
+  color: #fff;
+  background: var(--tab);
+  text-transform: lowercase;
+}
+.widget ol, .widget ul { margin: 0; padding: 8px 10px 8px 30px; font: 12px/20px Verdana, Tahoma, Arial, sans-serif; }
+.widget ol { list-style: decimal-leading-zero; color: var(--meta); }
+.widget ul.links { list-style: square; color: var(--tab); }
+
+/* ---------- footer ---------- */
+.foot { margin-top: 12px; padding: 10px 0 30px; text-align: center; font: 11px Verdana, Tahoma, Arial, sans-serif; color: #222; }
+.foot p { margin: 0 0 6px; }
+.foot .foot-links { text-transform: lowercase; }
+.foot .foot-links a { color: #000; }
+.foot .foot-links a:visited { color: #222; }
+.foot .foot-links a:hover { color: #fff; }

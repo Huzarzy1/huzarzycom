@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=900">
 <link rel="stylesheet" href="css/retro.css">
 </head>
-<body data-page="home">
+<body id="top">
 
 <div class="gutter gutter-left"><p class="caption">lower silesia,<br>poland</p></div>
 <div class="gutter gutter-right"></div>
@@ -23,16 +23,17 @@
     </div>
   </header>
 
+  <!-- Every section link points at a post further down this page. -->
   <nav class="sections" aria-label="Main">
     <ul class="sec">
-      <li><a href="index.html" data-page="home"><span class="lab" data-i18n="nav.home">home</span><span class="num">01</span></a></li>
-      <li><a href="index.html#about"><span class="lab" data-i18n="navbar.about">about</span><span class="num">02</span></a></li>
-      <li><a href="index.html#academics"><span class="lab" data-i18n="academics.title">academics</span><span class="num">03</span></a></li>
-      <li><a href="index.html#interests"><span class="lab" data-i18n="navbar.interests">interests</span><span class="num">04</span></a></li>
-      <li><a href="index.html#stack"><span class="lab" data-i18n="navbar.stack">stack</span><span class="num">05</span></a></li>
-      <li><a href="projects.html" data-page="projects"><span class="lab" data-i18n="nav.projects">projects</span><span class="num">06</span></a></li>
-      <li><a href="formula1.html" data-page="formula1"><span class="lab" data-i18n="nav.formula1">formula 1</span><span class="num">07</span></a></li>
-      <li><a href="contact.html" data-page="contact"><span class="lab" data-i18n="nav.contact">contact</span><span class="num">08</span></a></li>
+      <li><a href="#home"><span class="lab" data-i18n="nav.home">home</span><span class="num">01</span></a></li>
+      <li><a href="#about"><span class="lab" data-i18n="navbar.about">about</span><span class="num">02</span></a></li>
+      <li><a href="#academics"><span class="lab" data-i18n="academics.title">academics</span><span class="num">03</span></a></li>
+      <li><a href="#interests"><span class="lab" data-i18n="navbar.interests">interests</span><span class="num">04</span></a></li>
+      <li><a href="#stack"><span class="lab" data-i18n="navbar.stack">stack</span><span class="num">05</span></a></li>
+      <li><a href="#projects"><span class="lab" data-i18n="nav.projects">projects</span><span class="num">06</span></a></li>
+      <li><a href="#formula1"><span class="lab" data-i18n="nav.formula1">formula 1</span><span class="num">07</span></a></li>
+      <li><a href="#contact"><span class="lab" data-i18n="nav.contact">contact</span><span class="num">08</span></a></li>
     </ul>
     <ul class="tabs">
       <li><a href="https://github.com/Huzarzy1" target="_blank" rel="noopener noreferrer">github</a></li>
@@ -42,14 +43,172 @@
     </ul>
   </nav>
 
-  <main class="content">
-    <section class="box main" id="welcome">
-      <h2 data-i18n="welcome.title">Welcome</h2>
-      <p data-i18n="welcome.subtitle">Hi, I’m Brandon — a Polish/Canadian student passionate about technology, travel, and learning.
+  <div class="content">
+
+    <main class="box main">
+
+      <p class="dateline" data-date="2026-10-02">Friday, October 2, 2026</p>
+
+      <!-- 01 -->
+      <article class="post" id="home">
+        <h2><a href="#home" data-i18n="welcome.title">Welcome</a></h2>
+        <p class="meta"><span data-i18n="ui.postedBy">posted by brandon</span> | <a href="#home" data-i18n="ui.permalink">permalink</a></p>
+        <img class="thumb" src="img/thumbs/poland.jpg" width="102" height="102" alt="">
+        <p data-i18n="welcome.subtitle">Hi, I’m Brandon — a Polish/Canadian student passionate about technology, travel, and learning.
 I enjoy building both physical and digital technology.</p>
-    </section>
-    <aside class="box side"></aside>
-  </main>
+      </article>
+
+      <!-- 02 -->
+      <article class="post" id="about">
+        <h2><a href="#about" data-i18n="about.title">About Me</a></h2>
+        <p class="meta"><span data-i18n="ui.postedBy">posted by brandon</span> | <a href="#about" data-i18n="ui.permalink">permalink</a> | <a href="#top" data-i18n="ui.top">top ↑</a></p>
+        <p data-i18n="about.description">I am a second-year Bachelor of Applied Computer Science (BCS) student at Dalhousie University in Halifax, Nova Scotia.
+
+My main interests lie in web/software development and cybercrime, particularly how modern systems scale, fail, and are secured.
+I enjoy working on projects that force me to think beyond coursework and into real-world constraints.</p>
+        <h3 data-i18n="closing.title">Looking Ahead</h3>
+        <p data-i18n="closing.description">Looking forward, I want to continue building meaningful software, gain experience in professional environments, and deepen my understanding of how technology can be used responsibly.
+
+I’m always open to learning from new people, new systems, and new challenges.</p>
+      </article>
+
+      <!-- 03 -->
+      <article class="post" id="academics">
+        <h2><a href="#academics" data-i18n="academics.university.label">My University</a></h2>
+        <p class="meta"><span data-i18n="ui.postedBy">posted by brandon</span> | <a href="#academics" data-i18n="ui.permalink">permalink</a> | <a href="#top" data-i18n="ui.top">top ↑</a></p>
+        <img class="thumb" src="img/thumbs/dal-fcs.jpg" width="102" height="102" alt="Dalhousie University Faculty of Computer Science">
+        <p data-i18n="academics.university.description">Dalhousie University provides me with a strong foundation in computer science, ranging from algorithms and data structures to modern topics like machine learning.
+
+Outside of lectures, I focus on applying these concepts through independent projects and experimenting with real systems and tools.</p>
+      </article>
+
+      <!-- 04 -->
+      <article class="post" id="interests">
+        <h2><a href="#interests" data-i18n="interests.title">My Interests</a></h2>
+        <p class="meta"><span data-i18n="ui.postedBy">posted by brandon</span> | <a href="#interests" data-i18n="ui.permalink">permalink</a> | <a href="#top" data-i18n="ui.top">top ↑</a></p>
+        <img class="thumb" src="img/thumbs/prague.jpg" width="102" height="102" alt="Brandon on the Charles Bridge in Prague">
+        <h3 data-i18n="interests.technology.label">Technology</h3>
+        <p data-i18n="interests.technology.description">I enjoy exploring software development through hands-on projects, learning new tools as I go, and refining how I approach problem-solving. I’m especially interested in systems that operate continuously and at scale.</p>
+        <h3 data-i18n="interests.travelling.label">Travelling</h3>
+        <p data-i18n="interests.travelling.description">Traveling gives me perspective outside of code. Prague is my favorite city — the mix of history, architecture, and everyday life makes you feel like you're in a fairy tale.</p>
+      </article>
+
+      <!-- 05 -->
+      <article class="post" id="stack">
+        <h2><a href="#stack" data-i18n="techStack.title">My Tech Stack</a></h2>
+        <p class="meta"><span data-i18n="ui.postedBy">posted by brandon</span> | <a href="#stack" data-i18n="ui.permalink">permalink</a> | <a href="#top" data-i18n="ui.top">top ↑</a></p>
+        <dl class="specs">
+          <dt data-i18n="ui.languages">Languages</dt><dd data-i18n="techStack.languages">Java, Python, JavaScript, C</dd>
+          <dt data-i18n="ui.frontend">Frontend</dt><dd data-i18n="techStack.frontend">React, HTML, CSS — focused on responsive layouts and clean UI</dd>
+          <dt data-i18n="ui.backend">Backend</dt><dd data-i18n="techStack.backend">Node.js, REST APIs, JavaFX desktop applications</dd>
+          <dt data-i18n="ui.cloud">Cloud</dt><dd data-i18n="techStack.cloud">Linux-based servers, Oracle Cloud Infrastructure (VMs), deployment &amp; monitoring</dd>
+          <dt data-i18n="ui.tools">Tools</dt><dd data-i18n="techStack.tools">Git/GitHub, VS Code, IntelliJ, command line, iterative development</dd>
+        </dl>
+      </article>
+
+      <!-- 06 -->
+      <article class="post" id="projects">
+        <h2><a href="#projects" data-i18n="projects.featuredTitle">Featured Work</a></h2>
+        <p class="meta"><span data-i18n="ui.postedBy">posted by brandon</span> | <a href="#projects" data-i18n="ui.permalink">permalink</a> | <a href="#top" data-i18n="ui.top">top ↑</a></p>
+        <ul class="listing">
+          <li>
+            <img class="thumb" src="img/thumbs/huzarzy.jpg" width="102" height="102" alt="">
+            <h4 data-i18n="projects.huzarzy.title">huzarzy.com — Personal Website</h4>
+            <p data-i18n="projects.huzarzy.description">Designed and developed a responsive personal website to showcase projects, experience, and interests, featuring reusable React components, scroll-based animations, and theme-aware light/dark styling. Built with an emphasis on clean UI structure, maintainability, and performance.</p>
+            <p class="tech" data-i18n="projects.huzarzy.tech">Tech: React, API, JavaScript, CSS, Responsive Design</p>
+          </li>
+          <li>
+            <img class="thumb" src="img/thumbs/atmocan.jpg" width="102" height="102" alt="">
+            <h4 data-i18n="projects.atmocan.title">AtmoCan — JavaFX Weather Application</h4>
+            <p data-i18n="projects.atmocan.description">Built a JavaFX desktop application that displays Canadian hourly and daily weather forecasts using external weather APIs. Focused on clean UI layout, data parsing, and asynchronous updates to deliver real-time forecast information.</p>
+            <p class="tech" data-i18n="projects.atmocan.tech">Tech: Java, Maven, JavaFX, REST APIs, JSON</p>
+          </li>
+        </ul>
+        <h3 data-i18n="projects.otherTitle">Other Projects</h3>
+        <ul class="listing">
+          <li>
+            <img class="thumb" src="img/thumbs/chintcoin.jpg" width="102" height="102" alt="">
+            <h4 data-i18n="projects.blockchain.title">CHINTCOIN - Blockchain Client</h4>
+            <p data-i18n="projects.blockchain.description">Created a GUI blockchain client in JFrame that allows users to mine, send, and receive a custom cryptocurrency called CHINTCOIN. Implemented core blockchain concepts such as proof-of-work mining, transaction validation, and decentralized ledger management to explore distributed systems and cryptographic principles. All developed in Java.</p>
+          </li>
+          <li>
+            <img class="thumb" src="img/thumbs/filechain.jpg" width="102" height="102" alt="">
+            <h4 data-i18n="projects.filechain.title">FileChain — Personal Cloud File Sharing System</h4>
+            <p data-i18n="projects.filechain.description">Created a lightweight personal cloud file-sharing system enabling secure file transfer between my PC and laptop. Built with Python and Tkinter, hosted on a Raspberry Pi, and designed to explore networking, file I/O, and self-hosted infrastructure concepts.</p>
+          </li>
+          <li>
+            <img class="thumb" src="img/thumbs/sticknotez.jpg" width="102" height="102" alt="">
+            <h4 data-i18n="projects.sticknotez.title">StickNotez — Windows Background Utility</h4>
+            <p data-i18n="projects.sticknotez.description">Developed a C# WinForms sticky notes application that runs as a background process on Windows. Designed for low resource usage, persistent note storage, and seamless desktop integration without interrupting the user workflow.</p>
+          </li>
+        </ul>
+        <h3 data-i18n="projects.closing.title">How I Build</h3>
+        <p data-i18n="projects.closing.description">I prioritize clarity, maintainability, and understanding how systems work under the hood. I am most interested in projects that expose real-world constraints—networking, security, data flow, and user experience.</p>
+      </article>
+
+      <!-- 07 -->
+      <article class="post" id="formula1">
+        <h2><a href="#formula1" data-i18n="projects.f1.title">Formula 1 Live Leaderboard</a></h2>
+        <p class="meta"><span data-i18n="ui.postedBy">posted by brandon</span> | <a href="#formula1" data-i18n="ui.permalink">permalink</a> | <a href="#top" data-i18n="ui.top">top ↑</a></p>
+        <img class="thumb" src="img/thumbs/f1.jpg" width="102" height="102" alt="Screenshot of the live leaderboard">
+        <p data-i18n="projects.f1.description">Developed a web application that displays live Formula 1 standings and race data by integrating third-party APIs. Implemented dynamic updates, structured state management, and a responsive interface optimized for real-time data consumption. Hosted on an Oracle Cloud VM and displayed on huzarzy.com.</p>
+      </article>
+
+      <!-- 08 -->
+      <article class="post" id="contact">
+        <h2><a href="#contact" data-i18n="contact.title">Contact</a></h2>
+        <p class="meta"><span data-i18n="ui.postedBy">posted by brandon</span> | <a href="#contact" data-i18n="ui.permalink">permalink</a> | <a href="#top" data-i18n="ui.top">top ↑</a></p>
+        <p data-i18n="contact.subtitle">I’d love to connect! Whether it’s to chat about tech, travel, or potential collaborations, feel free to reach out.</p>
+        <h3 data-i18n="contact.email.title">E-Mail</h3>
+        <p data-i18n="contact.email.description1" data-linkify>You can also reach out to me via email at bkuciapski1@gmail.com (personal) or bkuciapski@dal.ca (school).</p>
+        <p data-i18n="contact.email.description2">I check my email regularly, so don’t hesitate to send a message if you have questions, project ideas, or just want to connect. I promise to get back to you as soon as possible!</p>
+        <h3 data-i18n="contact.connect.title">Let's Connect</h3>
+        <p data-i18n="contact.connect.description1">Networking and collaboration are some of my favorite parts of tech and learning. Whether it’s discussing a programming challenge, I’m always happy to chat.</p>
+      </article>
+
+    </main>
+
+    <aside class="side">
+      <div class="widget">
+        <h2 data-i18n="ui.inThisBlog">in this blog</h2>
+        <ol class="index">
+          <li><a href="#home" data-i18n="welcome.title">Welcome</a></li>
+          <li><a href="#about" data-i18n="about.title">About Me</a></li>
+          <li><a href="#academics" data-i18n="academics.university.label">My University</a></li>
+          <li><a href="#interests" data-i18n="interests.title">My Interests</a></li>
+          <li><a href="#stack" data-i18n="techStack.title">My Tech Stack</a></li>
+          <li><a href="#projects" data-i18n="projects.featuredTitle">Featured Work</a></li>
+          <li><a href="#formula1" data-i18n="projects.f1.title">Formula 1 Live Leaderboard</a></li>
+          <li><a href="#contact" data-i18n="contact.title">Contact</a></li>
+        </ol>
+      </div>
+      <div class="widget">
+        <h2 data-i18n="ui.findMe">find me</h2>
+        <ul class="links">
+          <li><a href="https://github.com/Huzarzy1" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/kuciapski/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/kuciapski3/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/brandon.kuciapski" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="mailto:bkuciapski1@gmail.com" data-i18n="ui.email">e-mail</a></li>
+        </ul>
+      </div>
+    </aside>
+
+  </div>
+
+  <footer class="foot">
+    <p class="foot-links">
+      <a href="#home" data-i18n="nav.home">home</a> |
+      <a href="#about" data-i18n="navbar.about">about</a> |
+      <a href="#academics" data-i18n="academics.title">academics</a> |
+      <a href="#interests" data-i18n="navbar.interests">interests</a> |
+      <a href="#stack" data-i18n="navbar.stack">stack</a> |
+      <a href="#projects" data-i18n="nav.projects">projects</a> |
+      <a href="#formula1" data-i18n="nav.formula1">formula 1</a> |
+      <a href="#contact" data-i18n="nav.contact">contact</a>
+    </p>
+    <p class="copy" data-i18n="ui.copyright">© 2026 Brandon Kuciapski. All rights reserved.</p>
+  </footer>
 
 </div>
 
