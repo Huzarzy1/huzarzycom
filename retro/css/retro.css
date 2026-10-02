@@ -3,19 +3,6 @@
    64px plate, numbered section row, one row of tabs). All code here is original. */
 
 @font-face {
-  font-family: 'Avant Garde';
-  src: url('../fonts/ITCAvantGardeStd-Bk.woff2') format('woff2'),
-       url('../fonts/ITCAvantGardeStd-Bk.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Avant Garde';
-  src: url('../fonts/AvantGarde-Bold.otf') format('opentype');
-  font-weight: 700;
-  font-style: normal;
-}
-@font-face {
   font-family: 'Myriad Light';
   src: url('../fonts/MyriadPro-Light.otf') format('opentype');
   font-weight: 400;
@@ -23,32 +10,15 @@
 }
 
 :root {
-  --page-bg: #808080;
-  --plate-top: #ffffff;
-  --plate-mid: #efefef;
-  --plate-bot: #c4c4c4;
-  --ink: #1a1a1a;
-  --ink-light: #8a8a8a;
-  --num: #b3b3b3;
+  --page-bg: #898a8c;
+  --ink: #000000;
+  --num: #666666;
   --num-active: #ffffff;
-  --tab: #f6931f;
-  --tab-hover: #d97a08;
+  --tab: #fe9b0d;
+  --tab-hover: #e38400;
   --gutter-left: #6b4337;
   --gutter-right: #b3a38e;
   --shell: #ffffff;
-}
-
-[data-theme="night"] {
-  --page-bg: #262626;
-  --plate-top: #707070;
-  --plate-mid: #4a4a4a;
-  --plate-bot: #2a2a2a;
-  --ink: #f2f2f2;
-  --ink-light: #a6a6a6;
-  --num: #666666;
-  --gutter-left: #35211a;
-  --gutter-right: #433d35;
-  --shell: #e6e6e6;
 }
 
 html, body { margin: 0; padding: 0; }
@@ -71,7 +41,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   position: absolute;
   top: 0;
   bottom: 0;
-  width: max(0px, calc(50% - 421px));
+  width: max(0px, calc(50% - 427px)); /* leaves 6px of page gray beside the column */
 }
 .gutter-left { left: 0; background: var(--gutter-left); }
 .gutter-right { right: 0; background: var(--gutter-right); }
@@ -95,29 +65,26 @@ ul { list-style: none; margin: 0; padding: 0; }
 }
 
 /* ---------- masthead plate ---------- */
+/* The plate, wordmark and sunflower are one image (img/masthead.png, 841x64).
+   The h1 keeps real text for screen readers and search; the image hides it. */
 .masthead {
   position: relative;
   height: 64px;
   border-radius: 12px;
-  background: linear-gradient(to bottom, var(--plate-top) 0, var(--plate-mid) 38%, var(--plate-bot) 100%);
-  box-shadow: inset 0 1px 0 rgba(255,255,255,.8), inset 0 -1px 0 rgba(0,0,0,.14);
+  overflow: hidden;
+  background: #c4c4c4 url('../img/masthead.png') left top / 100% 100% no-repeat;
 }
-.masthead h1 {
-  margin: 0;
-  position: absolute;
-  left: 22px;
-  top: 0;
-  font-family: 'Avant Garde', 'Century Gothic', 'Trebuchet MS', sans-serif;
-  font-size: 42px;
-  line-height: 64px;
-  letter-spacing: -.02em;
-  font-weight: 400;
+.masthead h1 { margin: 0; height: 64px; }
+.masthead h1 a {
+  display: block;
+  height: 64px;
+  overflow: hidden;
+  text-indent: -9999px;
+  white-space: nowrap;
 }
-.masthead h1 a { color: inherit; }
-.masthead .light { color: var(--ink-light); font-weight: 400; }
-.masthead .bold  { color: var(--ink); font-weight: 700; margin-left: .12em; }
 
-.lang { position: absolute; right: 16px; top: 22px; display: flex; gap: 4px; }
+/* Sits in the empty part of the plate, left of the flower. */
+.lang { position: absolute; right: 270px; top: 22px; display: flex; gap: 4px; }
 .lang button {
   height: 20px;
   min-width: 26px;
@@ -136,51 +103,71 @@ ul { list-style: none; margin: 0; padding: 0; }
   color: #fff;
 }
 
-/* ---------- numbered section row ---------- */
-.sections ul {
+/* ---------- numbered section row ----------
+   Measured from the sikhchic nav sprite and a 1:1 screenshot of it:
+   54px row; label ink 12px→20px (baseline) from the top, numeral 27px→41px;
+   first label 15px in; numeral right-aligned under its label.
+   With fewer sections than sikhchic, the labels are spread so the row
+   runs the full width of the plate (15px in at both ends).
+   Normal: #000 label, #666 numeral. Hover and current page: both white. */
+.sec {
   display: flex;
   justify-content: space-between;
   height: 54px;
   box-sizing: border-box;
-  padding: 11px 10px 0;
+  padding: 0 14px;
 }
-.sections a {
+.sec a {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  height: 54px;
+  box-sizing: border-box;
+  padding-top: 10px;
   color: var(--ink);
 }
 .sections .lab {
-  align-self: flex-start;
-  font-size: 12px;
-  line-height: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
+  font-size: 13px;
+  line-height: 13px;
   text-transform: lowercase;
+  white-space: nowrap;
 }
 .sections .num {
-  align-self: flex-end;
-  margin-top: 1px;
-  font-family: 'Myriad Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 23px;
-  line-height: 24px;
+  margin-top: 3px;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Light', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 21px;
+  letter-spacing: -.02em;
   color: var(--num);
 }
-.sections a:hover .num { color: #e2e2e2; }
-.sections a[aria-current="page"] .lab,
-.sections a[aria-current="page"] .num { color: var(--num-active); }
+.sec a:hover .lab,
+.sec a:hover .num,
+.sec a[aria-current="page"] .lab,
+.sec a[aria-current="page"] .num { color: var(--num-active); }
 
-/* ---------- tab row ---------- */
-.tabs { display: flex; gap: 1px; margin-top: 2px; }
+/* ---------- orange button row ----------
+   Measured from the screenshot: flat #fe9b0d, 25px tall, square top,
+   ~5px rounded bottom corners, 1px page-gray gaps, 13px white text,
+   ~9-10px padding each side. Buttons grow from their text width so the
+   row ends flush with the plate. */
+.tabs { display: flex; gap: 1px; }
 .tabs li { flex: 1 1 auto; }
 .tabs a {
   display: block;
   height: 25px;
-  line-height: 25px;
-  padding: 0 10px;
+  box-sizing: border-box;
+  padding: 5px 10px 0;
   text-align: center;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 13px;
+  line-height: 13px;
+  white-space: nowrap;
   color: #fff;
   background: var(--tab);
-  border-radius: 6px;
+  border-radius: 0 0 5px 5px;
 }
 .tabs a:hover { background: var(--tab-hover); }
 

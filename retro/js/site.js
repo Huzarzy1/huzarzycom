@@ -1,4 +1,4 @@
-/* retro/js/site.js: language chips, day/night toggle, current-page marker. */
+/* retro/js/site.js: language chips and current-page marker. */
 (function () {
   var S = window.RETRO_STRINGS || {};
   var root = document.documentElement;
@@ -36,24 +36,10 @@
     store('lang', lang);
   }
 
-  function applyTheme(theme) {
-    if (theme === 'night') root.setAttribute('data-theme', 'night');
-    else root.removeAttribute('data-theme');
-    store('theme', theme);
-  }
-
   var chips = document.querySelectorAll('.lang button');
   for (var i = 0; i < chips.length; i++) {
     chips[i].addEventListener('click', function () {
       applyLang(this.getAttribute('data-lang'));
-    });
-  }
-
-  var toggle = document.getElementById('theme-toggle');
-  if (toggle) {
-    toggle.addEventListener('click', function (e) {
-      e.preventDefault();
-      applyTheme(root.getAttribute('data-theme') === 'night' ? 'day' : 'night');
     });
   }
 
@@ -63,6 +49,5 @@
     if (links[k].getAttribute('data-page') === page) links[k].setAttribute('aria-current', 'page');
   }
 
-  applyTheme(stored('theme', 'day'));
   applyLang(stored('lang', 'en'));
 })();
