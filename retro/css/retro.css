@@ -10,9 +10,9 @@
 }
 
 :root {
-  --page-bg: #808080;
-  --ink: #1a1a1a;
-  --num: #b3b3b3;
+  --page-bg: #898a8c;
+  --ink: #000000;
+  --num: #666666;
   --num-active: #ffffff;
   --tab: #f6931f;
   --tab-hover: #d97a08;
@@ -113,35 +113,48 @@ ul { list-style: none; margin: 0; padding: 0; }
   color: #fff;
 }
 
-/* ---------- numbered section row ---------- */
+/* ---------- numbered section row ----------
+   Measured from the sikhchic nav sprite and a 1:1 screenshot of it:
+   54px row; label ink 12px→20px (baseline) from the top, numeral 27px→41px;
+   first label 15px in, then each label 9px after the previous one;
+   numeral right-aligned under its label. Normal: #000 label, #666 numeral.
+   Hover and current page: both white. */
 .sections ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 7px;
   height: 54px;
   box-sizing: border-box;
-  padding: 11px 10px 0;
+  padding: 0 0 0 14px;
 }
 .sections a {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  height: 54px;
+  box-sizing: border-box;
+  padding-top: 10px;
   color: var(--ink);
 }
 .sections .lab {
-  align-self: flex-start;
-  font-size: 12px;
-  line-height: 14px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 700;
+  font-size: 13px;
+  line-height: 13px;
   text-transform: lowercase;
+  white-space: nowrap;
 }
 .sections .num {
-  align-self: flex-end;
-  margin-top: 1px;
-  font-family: 'Myriad Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-size: 23px;
-  line-height: 24px;
+  margin-top: 3px;
+  font-family: 'HelveticaNeue-Light', 'Helvetica Neue Light', 'Helvetica Neue', 'Myriad Light', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 21px;
+  letter-spacing: -.02em;
   color: var(--num);
 }
-.sections a:hover .num { color: #e2e2e2; }
+.sections a:hover .lab,
+.sections a:hover .num,
 .sections a[aria-current="page"] .lab,
 .sections a[aria-current="page"] .num { color: var(--num-active); }
 
