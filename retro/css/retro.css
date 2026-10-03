@@ -17,8 +17,8 @@
   --tab: #2f6fb3;        /* deep sky blue: complements the sunflower, 5.2:1 with white text */
   --tab-hover: #245a94;
   /* Side photo and the colour that continues below it if the page is longer. */
-  --side-photo: url('../img/side-rynek.jpg');
-  --side-under: #363b42;
+  --side-photo: url('../img/side-silesia.jpg');
+  --side-under: #1b251a;
   --shell: #ffffff;
 }
 
@@ -47,7 +47,7 @@ ul { list-style: none; margin: 0; padding: 0; }
   --side-ratio: 0.6667; /* photo height / width (1600 / 2400) */
   background-color: var(--side-under);
   /* top layer fades the photo's last stretch into --side-under, so short photos end softly */
-  background-image: linear-gradient(rgba(54,59,66,0) 70%, var(--side-under) 100%), var(--side-photo);
+  background-image: linear-gradient(rgba(27,37,26,0) 70%, var(--side-under) 100%), var(--side-photo);
   background-repeat: no-repeat;
   background-size: 100vw calc(100vw * var(--side-ratio)), 100vw auto;
 }
@@ -62,8 +62,8 @@ ul { list-style: none; margin: 0; padding: 0; }
   font-size: 14px;
   line-height: 17px;
   letter-spacing: .08em;
-  color: #fff;
-  text-shadow: 0 1px 2px rgba(0,0,0,.45); /* stays readable over a bright sky */
+  color: #2b3440;
+  text-shadow: 0 1px 1px rgba(255,255,255,.6); /* dark text reads best over the pale evening sky */
 }
 
 #page {
